@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test Site</title>
+    <link rel="stylesheet" href="styles/main.css">
+</head>
+<body>
+    <h1>Test Site</h1>
+    <p>This is an example site based on <a href="https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/Dealing_with_files">MDN Dealing with files</a> documentaion.</p>
+    <p>There is no 'backend' for this site (database or serverside scripting) -- it's a static site.</p>
+    <p>The important thing to notice here is source code and the directory structure for this site. You will want to download and unzip the test-site folder, and veiw the contents in a file manager like Microsoft Windows File Explorer or Apple's Finder for Mac. Look at the files in an editor like VSCode. Upload and publish (host) the site on a server like GitHub Pages, or the CSCI 331 course server.</p>
+    
+    <!-- This is a comment -->
+    <!-- the hr tag is 'horizontal rule', ie: a line. No closing tag needed. -->
+    <hr>
+
+    <h2>Notice this HTML file is named index.html</h2>
+    <p>That's a special name. It's the "homepage," or default page that loads into the browser.</p>
+    <p>Other HTML pages in the site will have unique names.</p>
+
+    <h2>Images</h2>
+    <p>It's common to store images used on a website in a folder called images.</p>
+    <p>To to actually include an image on a page, use the img tags. To see how that is done in the source code, right-click on this page in a browser window like Google Chrome or Mozilla Firefox, and choose "Inspect > View Page Source."</p>
+    <img src="images/bobcat.jpg" alt="Photo of a bobcat">
+    <p>By the way, notice how links to other sites are done with an a tag, which contains the href attribute.</p>
+    <a href="https://www.pexels.com/search/bobcat/">Photo from Pexels.com</a>
+    <p>Links to other pages on the same site don't require the absolute address (with the http://hostname/etc.) Instead, you can just provide the relative path. <a href="another_page.html">Here is an example.</a></p>
+
+    <h2>Styles</h2>
+    <p>Styles on a webpage (ie: fonts, colors, borders, layout) are controlled with CSS -- Cascading Style Sheets.</p>
+    <p>Generally, CSS files are kept in a folder called styles or css.</p>
+    <p>This page has some simple styling: a gold border around the image above and a blue font color for the number below. The page can find the style because the path to it is included in the top of this page in the link tag, which provides the path with the href attribute.</p>
+    
+    <h2>Scripts</h2>
+    <p>A user can interact with a webpage via JavaScript. JavaScript files a often stored in a folder called scripts (as in this example), or js, or something similar.</p>
+    <h1 id="rand_num">0</h1>
+    <script src="scripts/rando.js"></script>
+    <button onclick="setRandomNum()">Click to generate a random number.</button>
+</body>
+</html>
