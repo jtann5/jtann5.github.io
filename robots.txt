@@ -1,0 +1,31 @@
+# Block all bots *except* search engines from crawling the site
+User-agent: *
+Disallow: /
+
+# Allow Googlebot to crawl everything, except /contact.html, /resume.html, and /portfolio.html
+User-agent: Googlebot
+Allow: /
+Disallow: /contact.html
+Disallow: /resume.html
+Disallow: /portfolio.html
+
+# Allow Bingbot to crawl everything, except /contact.html, /resume.html, and /portfolio.html
+User-agent: Bingbot
+Allow: /
+Disallow: /contact.html
+Disallow: /resume.html
+Disallow: /portfolio.html
+
+# Allow Yahoo Slurp to crawl everything, except /contact.html, /resume.html, and /portfolio.html
+User-agent: Slurp
+Allow: /
+Disallow: /contact.html
+Disallow: /resume.html
+Disallow: /portfolio.html
+
+# Allow DuckDuckBot to crawl everything, except /contact.html, /resume.html, and /portfolio.html
+User-agent: DuckDuckBot
+Allow: /
+Disallow: /contact.html
+Disallow: /resume.html
+Disallow: /portfolio.html

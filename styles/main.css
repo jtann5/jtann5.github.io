@@ -1,9 +1,0 @@
-/* Every img in the document will be styled */
-img {
-    border: 25px solid gold;
-}
-
-/* Only the single element with id="rand_num" will be styled */
-#rand_num {
-    color:blue;
-}
