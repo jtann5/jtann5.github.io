@@ -8,6 +8,9 @@ Allow: /
 Disallow: /contact.html
 Disallow: /resume.html
 Disallow: /portfolio.html
+Disallow: /contact
+Disallow: /resume
+Disallow: /portfolio
 
 # Allow Bingbot to crawl everything, except /contact.html, /resume.html, and /portfolio.html
 User-agent: Bingbot
@@ -15,6 +18,9 @@ Allow: /
 Disallow: /contact.html
 Disallow: /resume.html
 Disallow: /portfolio.html
+Disallow: /contact
+Disallow: /resume
+Disallow: /portfolio
 
 # Allow Yahoo Slurp to crawl everything, except /contact.html, /resume.html, and /portfolio.html
 User-agent: Slurp
@@ -22,6 +28,9 @@ Allow: /
 Disallow: /contact.html
 Disallow: /resume.html
 Disallow: /portfolio.html
+Disallow: /contact
+Disallow: /resume
+Disallow: /portfolio
 
 # Allow DuckDuckBot to crawl everything, except /contact.html, /resume.html, and /portfolio.html
 User-agent: DuckDuckBot
@@ -29,3 +38,6 @@ Allow: /
 Disallow: /contact.html
 Disallow: /resume.html
 Disallow: /portfolio.html
+Disallow: /contact
+Disallow: /resume
+Disallow: /portfolio
