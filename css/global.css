@@ -135,3 +135,8 @@ main {
     border: 1px solid #ccc;
     border-radius: 6px;
   }
+
+  img {
+    max-width: 60%;
+    max-height: 80vh;
+  }
