@@ -85,5 +85,16 @@
       max-height: 60vh; /* reduce max-height on smaller screens */
     }
   }
+
+  .video-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px; /* optional */
+  }
+  
+  iframe {
+    max-width: 100%;
+  }
   
   
