@@ -1,8 +1,42 @@
 :root {
     --primary-color: #12171e;
     --secondary-color: #6c757d;
-    --background-color: #f0f0f0;
+    --background-color: #fff;
     --text-color: #333;
     --text-color2: white;
     --text-hover: gray;
+    --brand-color: #1e90ff;
+}
+@media (prefers-color-scheme: dark) {
+    :root {
+        --primary-color: #12171e;
+        --secondary-color: #6c757d;
+        --background-color: #0a0d10;
+        --text-color: white;
+        --text-color2: #6a6868;
+        --text-hover: #3a3a3a;
+        --brand-color: #1e90ff;
+    }
+}
+
+/* Manual override (light mode forced on) */
+.light-mode {
+    --primary-color: #12171e;
+    --secondary-color: #6c757d;
+    --background-color: #fff;
+    --text-color: #333;
+    --text-color2: white;
+    --text-hover: gray;
+    --brand-color: #1e90ff;
+}
+
+/* Manual override (dark mode forced on) */
+.dark-mode {
+    --primary-color: #12171e;
+    --secondary-color: #6c757d;
+    --background-color: #0a0d10;
+    --text-color: white;
+    --text-color2: #6a6868;
+    --text-hover: #3a3a3a;
+    --brand-color: #1e90ff;
 }

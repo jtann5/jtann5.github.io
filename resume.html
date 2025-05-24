@@ -5,6 +5,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Resume | Jacob Tanner</title>
+
+    <script>
+        (function() {
+            const savedTheme = localStorage.getItem('theme');
+            if (savedTheme === 'dark') document.documentElement.classList.add('dark-mode');
+            else if (savedTheme === 'light') document.documentElement.classList.add('light-mode');
+        })();
+    </script>
+
     <link rel="stylesheet" href="css/global.css">
 
     <link rel="icon" type="image/png" href="icons/favicon-96x96.png" sizes="96x96" />
@@ -107,6 +116,14 @@
             <li>&copy; 2025 Jacob Tanner</li>
             <li><a href="https://github.com/jtann5" target="_blank" rel="noopener noreferrer">GitHub</a></li>
             <li><a href="https://www.linkedin.com/in/jacobytanner" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
+            <li>
+                <select id="theme-select" aria-label="Select theme">
+                    <option value="system">🖥️ System Default</option>
+                    <option value="light">🌞 Light</option>
+                    <option value="dark">🌙 Dark</option>
+                </select>
+            </li>
+            <script src="js/darkmode.js"></script>
         </ul>
     </footer>
 </body>

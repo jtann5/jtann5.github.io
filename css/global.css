@@ -17,7 +17,7 @@ nav {
     justify-content: space-between;
     align-items: center;
     padding: 20px 20px;
-    background-color:  var(--primary-color);
+    background-color: var(--primary-color);
     color: #fff;
 }
 
@@ -54,9 +54,9 @@ nav li a {
 }
 
 ul li a.active {
-    color: #1e90ff;
+    color: var(--brand-color);
     font-weight: bold;
-    border-bottom: 2px solid #1e90ff;
+    border-bottom: 2px solid var(--brand-color);
 }
 
 nav li a:hover {
@@ -64,7 +64,7 @@ nav li a:hover {
 }
 
 ul li a.active:hover {
-    color: #1e90ff;
+    color: var(--brand-color);
 }
 
 /* Responsive Design */
@@ -140,3 +140,38 @@ main {
     max-width: 60%;
     max-height: 80vh;
   }
+
+.underline-slide {
+  position: relative;
+  display: inline-block;
+  color: var(--text-color);
+  text-decoration: none;
+  padding-bottom: 2px;
+  transition: color 0.3s ease;
+  font-weight: 600;
+}
+
+.underline-slide:hover {
+  color: var(--brand-color);
+}
+
+.underline-slide::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 2px;
+  width: 100%;
+  background-color: var(--brand-color);
+  transform: scaleX(0.3); /* partially visible at rest */
+  opacity: 0.5;
+  transform-origin: left;
+  transition: transform 0.3s ease;
+}
+
+.underline-slide:hover::after {
+  transform: scaleX(1);
+  opacity: 1;
+}
+
+  

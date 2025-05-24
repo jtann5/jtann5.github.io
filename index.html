@@ -5,7 +5,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Jacob Tanner</title>
+
+    <script>
+        (function() {
+            const savedTheme = localStorage.getItem('theme');
+            if (savedTheme === 'dark') document.documentElement.classList.add('dark-mode');
+            else if (savedTheme === 'light') document.documentElement.classList.add('light-mode');
+        })();
+    </script>
+
     <link rel="stylesheet" href="css/global.css">
+
+    
 
     <link rel="icon" type="image/png" href="icons/favicon-96x96.png" sizes="96x96" />
     <link rel="icon" type="image/svg+xml" href="icons/favicon.svg" />
@@ -26,27 +37,33 @@
     </nav>
     <main>
         <h1>Hi, I'm Jacob Tanner</h1>
-        <p>I'm a graduate Computer Science student at Montana State University. <a href="about.html">Learn more about me.</a></p>
-        <p><a href="portfolio.html" class="btn">View My Work</a></p>
-        <p><a href="resume.html">View My Experience and Education </a></p>
-        <p>Have a project in mind or just want to chat? <a href="contact.html">Let's connect</a>.</p>
+        <p>I'm a graduate Computer Science student at Montana State University. <a href="about.html" class="underline-slide">Learn more about me.</a></p>
+        <p><a href="portfolio.html" class="underline-slide">View My Work &rarr;</a></p>
+        <p><a href="resume.html" class="underline-slide">View My Experience and Education &rarr;</a></p>
+        <p>Have a project in mind or just want to chat? <a href="contact.html" class="underline-slide">Let's connect</a>.</p>
 
         <h2>Featured projects</h2>
-        <div class="project-preview">
-            <h3>HRDC Housing Maintenance Portal</h3>
-            <picture>
-                <source srcset="images/housing-portal/homepage.webp" type="image/webp">
-                <img src="images/housing-portal/homepage.jpeg" alt="Homepage of HRDC housing portal">
-            </picture>
-            <br>
-            <a href="portfolio.html#housing-portal">View more</a>
-            <h3>Chem-E-Car Microcontroller System</h3>
-            <picture>
-                <source srcset="images/microcontroller-system/car.webp" type="image/webp">
-                <img src="images/microcontroller-system/car.jpeg" alt="Chem-E-Car">
-            </picture>
-            <br>
-            <a href="portfolio.html#microcontroller-system">View more</a>
+        <div class="featured-projects">
+            <div class="project-preview">
+                <h3>HRDC Housing Maintenance Portal</h3>
+                <picture>
+                    <source srcset="images/housing-portal/homepage.webp" type="image/webp">
+                    <img src="images/housing-portal/homepage.jpeg" alt="Homepage of HRDC housing portal">
+                </picture>
+                <br>
+                <p>Web application for viewing and managing tenent maintenence requests.</p>
+                <a href="portfolio.html#housing-portal" class="underline-slide">View More &rarr;</a>
+            </div>
+            <div class="project-preview">
+                <h3>Chem-E-Car Microcontroller System</h3>
+                <picture>
+                    <source srcset="images/microcontroller-system/car.webp" type="image/webp">
+                    <img src="images/microcontroller-system/car.jpeg" alt="Chem-E-Car">
+                </picture>
+                <br>
+                <p>System for controlling reactions on the MSU Chem-E-Car.</p>
+                <a href="portfolio.html#microcontroller-system" class="underline-slide">View More &rarr;</a>
+            </div>
         </div>
     </main>
     <footer>
@@ -54,6 +71,14 @@
             <li>&copy; 2025 Jacob Tanner</li>
             <li><a href="https://github.com/jtann5" target="_blank" rel="noopener noreferrer">GitHub</a></li>
             <li><a href="https://www.linkedin.com/in/jacobytanner" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
+            <li>
+                <select id="theme-select" aria-label="Select theme">
+                    <option value="system">🖥️ System Default</option>
+                    <option value="light">🌞 Light</option>
+                    <option value="dark">🌙 Dark</option>
+                </select>
+            </li>
+            <script src="js/darkmode.js"></script>
         </ul>
     </footer>
 </body>
