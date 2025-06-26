@@ -1,0 +1,76 @@
+.about-wrapper {
+  display: flex;
+  gap: 2rem;
+  max-width: 1200px;
+  margin: auto;
+  padding: 2rem;
+  align-items: flex-start;
+  flex-wrap: nowrap;
+  flex-direction: row;
+}
+
+/* Photo is first in HTML but we want it visually on the right on desktop */
+.about-photo {
+  flex: 1 1 40%;
+  max-width: 400px;
+  order: 2; /* push to the right on desktop */
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  margin: 0;
+}
+
+.about-photo img {
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+}
+
+.about-left {
+  flex: 1 1 60%;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  margin: 0;
+  padding: 0;
+  order: 1; /* left column */
+}
+
+.about-left > * {
+  margin: 0;
+  padding: 0;
+}
+
+.contact-form {
+  margin-top: 0;
+}
+
+/* Mobile: photo on top (order 1), then about-left (order 2) */
+@media (max-width: 768px) {
+  .about-wrapper {
+    flex-direction: column;
+  }
+
+  .about-photo {
+    order: 1;
+    width: 100%;
+    max-width: none;
+    margin-bottom: 1.5rem;
+    text-align: center;
+    display: block;
+  }
+
+  .about-photo img {
+    display: inline-block;
+    max-height: 400px;
+    width: auto;
+    max-width: 100%;
+    object-fit: cover;
+    border-radius: 12px;
+  }
+
+  .about-left {
+    order: 2;
+    flex: 1 1 100%;
+  }
+}

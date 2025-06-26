@@ -15,8 +15,7 @@
     </script>
 
     <link rel="stylesheet" href="css/global.css">
-
-    
+    <link rel="stylesheet" href="css/index.css">
 
     <link rel="icon" type="image/png" href="icons/favicon-96x96.png" sizes="96x96" />
     <link rel="icon" type="image/svg+xml" href="icons/favicon.svg" />
@@ -28,11 +27,16 @@
 <body>
     <nav>
         <a href="index.html" class="logo">Jacob Tanner</a>
+        <select id="theme-select" aria-label="Select theme">
+            <option value="system">🖥️ System Default</option>
+            <option value="light">🌞 Light</option>
+            <option value="dark">🌙 Dark</option>
+        </select>
+        <script src="js/darkmode.js"></script>
         <ul>
             <li><a href="portfolio.html">Portfolio</a></li>
             <li><a href="resume.html">Resume</a></li>
             <li><a href="about.html">About</a></li>
-            <li><a href="contact.html">Contact</a></li>
         </ul>
     </nav>
     <main>
@@ -40,29 +44,33 @@
         <p>I'm a graduate Computer Science student at Montana State University. <a href="about.html" class="underline-slide">Learn more about me.</a></p>
         <p><a href="portfolio.html" class="underline-slide">View My Work &rarr;</a></p>
         <p><a href="resume.html" class="underline-slide">View My Experience and Education &rarr;</a></p>
-        <p>Have a project in mind or just want to chat? <a href="contact.html" class="underline-slide">Let's connect</a>.</p>
+        <p>Have a project in mind or just want to chat? <a href="about.html#contact" class="underline-slide">Let's connect</a>.</p>
 
         <h2>Featured projects</h2>
         <div class="featured-projects">
-            <div class="project-preview">
-                <h3>HRDC Housing Maintenance Portal</h3>
+            <div class="project-preview" onclick="window.location.href='portfolio.html#housing-portal'" style="cursor: pointer;">
                 <picture>
-                    <source srcset="images/housing-portal/homepage.webp" type="image/webp">
-                    <img src="images/housing-portal/homepage.jpeg" alt="Homepage of HRDC housing portal">
+                    <source srcset="images/housing-portal/dashboard.webp" type="image/webp">
+                    <img src="images/housing-portal/dashboard.jpeg" alt="Dashboard of HRDC housing portal">
                 </picture>
                 <br>
+                <h3>HRDC Housing Maintenance Portal</h3>
                 <p>Web application for viewing and managing tenent maintenence requests.</p>
-                <a href="portfolio.html#housing-portal" class="underline-slide">View More &rarr;</a>
+                <div>
+                    <a href="portfolio.html#housing-portal" class="underline-slide">View More &rarr;</a>
+                </div>
             </div>
-            <div class="project-preview">
-                <h3>Chem-E-Car Microcontroller System</h3>
+            <div class="project-preview" onclick="window.location.href='portfolio.html#microcontroller-system'" style="cursor: pointer;">
                 <picture>
                     <source srcset="images/microcontroller-system/car.webp" type="image/webp">
                     <img src="images/microcontroller-system/car.jpeg" alt="Chem-E-Car">
                 </picture>
                 <br>
+                <h3>Chem-E-Car Microcontroller System</h3>
                 <p>System for controlling reactions on the MSU Chem-E-Car.</p>
-                <a href="portfolio.html#microcontroller-system" class="underline-slide">View More &rarr;</a>
+                <div>
+                    <a href="portfolio.html#microcontroller-system" class="underline-slide">View More &rarr;</a>
+                </div>
             </div>
         </div>
     </main>
@@ -71,14 +79,6 @@
             <li>&copy; 2025 Jacob Tanner</li>
             <li><a href="https://github.com/jtann5" target="_blank" rel="noopener noreferrer">GitHub</a></li>
             <li><a href="https://www.linkedin.com/in/jacobytanner" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
-            <li>
-                <select id="theme-select" aria-label="Select theme">
-                    <option value="system">🖥️ System Default</option>
-                    <option value="light">🌞 Light</option>
-                    <option value="dark">🌙 Dark</option>
-                </select>
-            </li>
-            <script src="js/darkmode.js"></script>
         </ul>
     </footer>
 </body>

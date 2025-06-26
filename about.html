@@ -15,6 +15,7 @@
     </script>
 
     <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="css/about.css">
 
     <link rel="icon" type="image/png" href="icons/favicon-96x96.png" sizes="96x96" />
     <link rel="icon" type="image/svg+xml" href="icons/favicon.svg" />
@@ -26,35 +27,56 @@
 <body>
     <nav>
         <a href="index.html" class="logo">Jacob Tanner</a>
+        <select id="theme-select" aria-label="Select theme">
+            <option value="system">🖥️ System Default</option>
+            <option value="light">🌞 Light</option>
+            <option value="dark">🌙 Dark</option>
+        </select>
+        <script src="js/darkmode.js"></script>
         <ul>
             <li><a href="portfolio.html">Portfolio</a></li>
             <li><a href="resume.html">Resume</a></li>
             <li><a href="about.html" class="active">About</a></li>
-            <li><a href="contact.html">Contact</a></li>
         </ul>
     </nav>
     <main>
-        <h1>About Me</h1>
-        <p>
-            I am currently pursuing a Master's in Computer Science at Montana State University. 
-            Throughout my studies, I have built several projects and collaborated on teams to hone my skills. 
-            I'm passionate about software engineering, web development, and cybersecurity. 
-            I'm excited to continue learning and growing in these fields.
-        </p>
+        <div class="about-wrapper">
+            <div class="about-photo">
+                <picture>
+                        <source srcset="images/about/main.webp" type="image/webp">
+                        <img src="images/about/main.jpeg" alt="Photo of Jacob Tanner">
+                </picture>
+            </div>
+            <div class="about-left">
+                <div class="about-text">
+                    <h1>About Me</h1>
+                    <p>
+                        I am currently pursuing a Master's in Computer Science at Montana State University. 
+                        Throughout my studies, I have built several projects and collaborated on teams to hone my skills. 
+                        I'm passionate about software engineering, web development, and cybersecurity. 
+                        I'm excited to continue learning and growing in these fields.
+                    </p>
+                </div>
+                <div class="contact-form">
+                    <h2 id="contact">Contact Me</h2>
+                    <form action="https://formsubmit.co/da16804d097e5537de7a4f2373a75f14" method="POST" class="contact-form">
+                        <input type="text" name="name" placeholder="Full Name" required>
+                        <input type="email" name="email" placeholder="Email Address" required>
+                        <textarea name="message" placeholder="Your Message" required></textarea>
+
+                        <input type="hidden" name="_next" value="https://jacobytanner.com/thank-you">
+
+                        <button type="submit">Send</button>
+                    </form>
+                </div>
+            </div>
+        </div>
     </main>
     <footer>
         <ul>
             <li>&copy; 2025 Jacob Tanner</li>
             <li><a href="https://github.com/jtann5" target="_blank" rel="noopener noreferrer">GitHub</a></li>
             <li><a href="https://www.linkedin.com/in/jacobytanner" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
-            <li>
-                <select id="theme-select" aria-label="Select theme">
-                    <option value="system">🖥️ System Default</option>
-                    <option value="light">🌞 Light</option>
-                    <option value="dark">🌙 Dark</option>
-                </select>
-            </li>
-            <script src="js/darkmode.js"></script>
         </ul>
     </footer>
 </body>

@@ -29,17 +29,23 @@
 <body>
     <nav>
         <a href="index.html" class="logo">Jacob Tanner</a>
+        <select id="theme-select" aria-label="Select theme">
+            <option value="system">🖥️ System Default</option>
+            <option value="light">🌞 Light</option>
+            <option value="dark">🌙 Dark</option>
+        </select>
+        <script src="js/darkmode.js"></script>
         <ul>
             <li><a href="portfolio.html" class="active">Portfolio</a></li>
             <li><a href="resume.html">Resume</a></li>
             <li><a href="about.html">About</a></li>
-            <li><a href="contact.html">Contact</a></li>
+
         </ul>
     </nav>
     <main>
         <h1>Portfolio Projects</h1>
         <div>
-            <h3 id="housing-portal">HRDC Housing Maintenance Portal</h3>
+            <h2 id="housing-portal">HRDC Housing Maintenance Portal</h2>
             <h5>Spring 2024</h5>
             <ul>
                 <li>Developed a web application for the HRDC, a nonprofit providing housing and essential services to
@@ -49,7 +55,8 @@
                 <li>Collaborated with a team of four, conducting two weekly scrum meetings to discuss work distribution</li>
                 <li>Utilized Django, PostgreSQL, NGINX, Gunicorn, HTML, CSS, Bootstrap5, HTMX, and JavaScript</li>
             </ul>
-
+            <a href="https://github.com/jtann5/HRDC_Housing_Portal" target="_blank" rel="noopener noreferrer" class="underline-slide">View on GitHub &rarr;</a>
+            <br><br>
             <div class="gallery-wrapper" id="gallery1">
                 <button class="arrow left" onclick="scrollGallery(-1, 'gallery1')">&#10094;</button>
                 <div class="gallery" id="gallery1-images">
@@ -75,11 +82,9 @@
             <button class="arrow right" onclick="scrollGallery(1, 'gallery1m')">&#10095;</button>
             </div>
             <div class="dots" id="gallery1m-dots"></div>
-    
-            <a href="https://github.com/jtann5/HRDC_Housing_Portal" target="_blank" rel="noopener noreferrer" class="underline-slide">View on GitHub &rarr;</a>
         </div>
         <div>
-            <h3 id="robotics">Embedded Systems Robotics</h3>
+            <h2 id="robotics">Embedded Systems Robotics</h2>
             <h5>Spring 2024</h5>
             <ul>
                 <li>Built a web application with Flask and JavaScript to control various functions of the robot manually</li>
@@ -88,7 +93,8 @@
                     localization with vector mathematics, and an ultrasonic sensor, enabling the robot to act as a door
                     greeter that guides users to specified quadrants and answers their questions</li>
             </ul>
-
+            <a href="https://github.com/jtann5/ROB" target="_blank" rel="noopener noreferrer" class="underline-slide">View on GitHub &rarr;</a>
+            <br><br>
             <div class="gallery-wrapper" id="gallery2">
                 <button class="arrow left" onclick="scrollGallery(-1, 'gallery2')">&#10094;</button>
                 <div class="gallery" id="gallery2-images">
@@ -97,18 +103,17 @@
                 <button class="arrow right" onclick="scrollGallery(1, 'gallery2')">&#10095;</button>
             </div>
             <div class="dots" id="gallery2-dots"></div>
-
-            <a href="https://github.com/jtann5/ROB" target="_blank" rel="noopener noreferrer" class="underline-slide">View on GitHub &rarr;</a>
         </div>
         <div>
-            <h3 id="mastermind">Mastermind Android App</h3>
+            <h2 id="mastermind">Mastermind Android App</h2>
             <h5>Fall 2023</h5>
             <ul>
                 <li>Developed an Android application based on the classic Mastermind game using Java</li>
                 <li>Integrated music and sound effects into the app and presented the implementation to the class</li>
                 <li>Implemented data storage for user preferences and game statistics</li>
             </ul>
-
+            <a href="https://github.com/jtann5/Mastermind" target="_blank" rel="noopener noreferrer" class="underline-slide">View on GitHub &rarr;</a>
+            <br><br>
             <div class="gallery-wrapper" id="gallery3">
                 <button class="arrow left" onclick="scrollGallery(-1, 'gallery3')">&#10094;</button>
                 <div class="gallery" id="gallery3-images">
@@ -117,17 +122,16 @@
                 <button class="arrow right" onclick="scrollGallery(1, 'gallery3')">&#10095;</button>
             </div>
             <div class="dots" id="gallery3-dots"></div>
-
-            <a href="https://github.com/jtann5/Mastermind" target="_blank" rel="noopener noreferrer" class="underline-slide">View on GitHub &rarr;</a>
         </div>
         <div>
-            <h3 id="htmx">HTMX Website</h3>
+            <h2 id="htmx">HTMX Website</h2>
             <h5>Fall 2023</h5>
             <ul>
                 <li>Developed a website implementing HTMX with a Flask backend</li>
                 <li>Utilized Flask to query SQLite database</li>
             </ul>
-
+            <a href="https://github.com/jtann5/HTMX" target="_blank" rel="noopener noreferrer" class="underline-slide">View on GitHub &rarr;</a>
+            <br><br>
             <div class="gallery-wrapper" id="gallery4">
                 <button class="arrow left" onclick="scrollGallery(-1, 'gallery4')">&#10094;</button>
                 <div class="gallery" id="gallery4-images">
@@ -136,11 +140,9 @@
                 <button class="arrow right" onclick="scrollGallery(1, 'gallery4')">&#10095;</button>
             </div>
             <div class="dots" id="gallery4-dots"></div>
-
-            <a href="https://github.com/jtann5/HTMX" target="_blank" rel="noopener noreferrer" class="underline-slide">View on GitHub &rarr;</a>
         </div>
         <div>
-            <h3 id="microcontroller-system">Chem-E-Car Microcontroller System</h3>
+            <h2 id="microcontroller-system">Chem-E-Car Microcontroller System</h2>
             <h5>Spring 2023</h5>
             <ul>
                 <li>Designed and implemented a C++-based control system using two Arduinos, a motor controller, relay,
@@ -151,7 +153,8 @@
                 <li>Incorporated an Easter egg that played “Take on Me,” helping the team win 1st place in the poster
                     competition</li>
             </ul>
-
+            <a href="https://github.com/jtann5/ChemE-Car-2023" target="_blank" rel="noopener noreferrer" class="underline-slide">View on GitHub &rarr;</a>
+            <br><br>
             <div class="gallery-wrapper" id="gallery5">
                 <button class="arrow left" onclick="scrollGallery(-1, 'gallery5')">&#10094;</button>
                 <div class="gallery" id="gallery5-images" id="gallery5">
@@ -164,8 +167,6 @@
             <div class="video-container">
                 <iframe width="560" height="315" src="https://www.youtube.com/embed/sEzAx5g2JGE?si=cDI4ax0xXyQPa3xf" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
             </div>
-
-            <a href="https://github.com/jtann5/ChemE-Car-2023" target="_blank" rel="noopener noreferrer" class="underline-slide">View on GitHub &rarr;</a>
         </div>
     </main>
     <footer>
@@ -173,14 +174,6 @@
             <li>&copy; 2025 Jacob Tanner</li>
             <li><a href="https://github.com/jtann5" target="_blank" rel="noopener noreferrer">GitHub</a></li>
             <li><a href="https://www.linkedin.com/in/jacobytanner" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
-            <li>
-                <select id="theme-select" aria-label="Select theme">
-                    <option value="system">🖥️ System Default</option>
-                    <option value="light">🌞 Light</option>
-                    <option value="dark">🌙 Dark</option>
-                </select>
-            </li>
-            <script src="js/darkmode.js"></script>
         </ul>
     </footer>
 </body>

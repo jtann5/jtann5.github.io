@@ -1,21 +1,52 @@
+/* Try brand color: #6c63ff */
+
+/*
+    --primary-color: top nav and footer
+    --secondary-color: 
+    --background-color: background color for the page
+    --card-color: background color for cards
+    --text-color: main text color for page content
+    --text-color2: text color for nav and footer items
+    --text-hover: color for text hover on nav and footer
+    --brand-color: brand color for the website
+    --display-dark: specifies display type for dark elements
+    --display-light: specifies display type for light elements
+*/
+
 :root {
     --primary-color: #12171e;
     --secondary-color: #6c757d;
     --background-color: #fff;
+    --card-color: #f9f9f9;
     --text-color: #333;
     --text-color2: white;
+    --text-color3: #222;
+    --text-color4: #444;
+    --text-color5: #666;
+    --text-color6: #777;
+    --text-color7: #ccc;
     --text-hover: gray;
     --brand-color: #1e90ff;
+    --display-dark: none;
+    --display-light: inline;
 }
 @media (prefers-color-scheme: dark) {
     :root {
         --primary-color: #12171e;
         --secondary-color: #6c757d;
         --background-color: #0a0d10;
+        --card-color: #2a2a2a;
         --text-color: white;
         --text-color2: #6a6868;
+        --text-color3: #f1f1f1;
+        --text-color4: #bbb;
+        --text-color5: #888;
+        --text-color6: #777;
+        --text-color7: #444;
         --text-hover: #3a3a3a;
         --brand-color: #1e90ff;
+        --display-dark: inline;
+        --display-light: none;
     }
 }
 
@@ -24,10 +55,18 @@
     --primary-color: #12171e;
     --secondary-color: #6c757d;
     --background-color: #fff;
+    --card-color: #f9f9f9;
     --text-color: #333;
     --text-color2: white;
+    --text-color3: #222;
+    --text-color4: #444;
+    --text-color5: #666;
+    --text-color6: #777;
+    --text-color7: #ccc;
     --text-hover: gray;
     --brand-color: #1e90ff;
+    --display-dark: none;
+    --display-light: inline;
 }
 
 /* Manual override (dark mode forced on) */
@@ -35,8 +74,16 @@
     --primary-color: #12171e;
     --secondary-color: #6c757d;
     --background-color: #0a0d10;
+    --card-color: #2a2a2a;
     --text-color: white;
     --text-color2: #6a6868;
+    --text-color3: #f1f1f1;
+    --text-color4: #bbb;
+    --text-color5: #888;
+    --text-color6: #777;
+    --text-color7: #444;
     --text-hover: #3a3a3a;
     --brand-color: #1e90ff;
+    --display-dark: inline;
+    --display-light: none;
 }

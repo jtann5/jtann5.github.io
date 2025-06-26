@@ -30,7 +30,7 @@ nav .logo {
 }
 
 nav .logo:hover {
-    color: #1e90ff;  
+    color: var(--brand-color);  
     transform: scale(1.1);
 }
 
@@ -113,10 +113,13 @@ footer a:hover {
 
 /* Main content */
 main {
-    min-height: 100vh;
-    margin-left: 40px;
-    margin-right: 40px;
+    min-height: 90vh;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 40px;
+    padding-right: 40px;
     margin-bottom: 40px;
+    max-width: 1200px;
 }
 
 
@@ -124,8 +127,7 @@ main {
     display: flex;
     flex-direction: column;
     gap: 1rem; /* space between items */
-    max-width: 400px; /* optional, to keep it narrow */
-    margin: 0 auto;   /* center the form */
+    max-width: 500px; /* optional, to keep it narrow */
   }
   .contact-form input,
   .contact-form textarea,
@@ -134,11 +136,21 @@ main {
     font-size: 1rem;
     border: 1px solid #ccc;
     border-radius: 6px;
+    background-color: var(--card-color);
+    color: var(--text-color);
   }
 
-  img {
-    max-width: 60%;
-    max-height: 80vh;
+  .contact-form textarea {
+    height: 200px;
+  }
+
+  .contact-form button {
+    background-color: var(--brand-color);
+    color: white;
+  }
+
+  .contact-form button:hover {
+    filter: grayscale(50%);
   }
 
 .underline-slide {
@@ -174,4 +186,26 @@ main {
   opacity: 1;
 }
 
+.light-image {
+    display: var(--display-light);
+}
   
+.dark-image {
+    display: var(--display-dark);
+}
+
+.btn-home {
+  display: inline-block;
+  background-color: var(--brand-color);
+  color: white;
+  padding: 15px 30px;
+  border-radius: 30px;
+  font-weight: 600;
+  text-decoration: none;
+  box-shadow: 0 0 10px var(--brand-color);
+  transition: background-color 0.3s ease;
+}
+
+.btn-home:hover {
+  filter: grayscale(50%);
+}

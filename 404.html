@@ -3,7 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>404 | Jacob Tanner</title>
+    <title>Error 404 | Jacob Tanner</title>
+
+    <script>
+        (function() {
+            const savedTheme = localStorage.getItem('theme');
+            if (savedTheme === 'dark') document.documentElement.classList.add('dark-mode');
+            else if (savedTheme === 'light') document.documentElement.classList.add('light-mode');
+        })();
+    </script>
+
+    <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="css/404.css">
 
     <link rel="icon" type="image/png" href="icons/favicon-96x96.png" sizes="96x96" />
     <link rel="icon" type="image/svg+xml" href="icons/favicon.svg" />
@@ -13,8 +24,45 @@
     <link rel="manifest" href="icons/site.webmanifest" />
 </head>
 <body>
-    <h1>Looks like you're lost</h1>
-    <a href="index.html">Take me back</a>
-    
+    <nav>
+        <a href="index.html" class="logo">Jacob Tanner</a>
+        <select id="theme-select" aria-label="Select theme">
+            <option value="system">🖥️ System Default</option>
+            <option value="light">🌞 Light</option>
+            <option value="dark">🌙 Dark</option>
+        </select>
+        <script src="js/darkmode.js"></script>
+        <ul>
+            <li><a href="portfolio.html">Portfolio</a></li>
+            <li><a href="resume.html">Resume</a></li>
+            <li><a href="about.html">About</a></li>
+        </ul>
+    </nav>
+    <main>
+        <div class="container">
+            <div class="image-container">
+                <picture class="light-image">
+                    <source srcset="images/errors/404.webp" type="image/webp">
+                    <img src="images/errors/404.jpeg" alt="Cosmos cat">
+                </picture>
+                <picture class="dark-image">
+                    <source srcset="images/errors/404-dark.webp" type="image/webp">
+                    <img src="images/errors/404-dark.jpeg" alt="Cosomos cat">
+                </picture>
+            </div>
+            <div class="text-content">
+                <h1>Looks like you're lost in the cosmos</h1>
+                <p>No planets can be found out here. Make sure you have the right coordinates.</p>
+                <a href="index.html" class="btn-home">Back To Home</a>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <ul>
+            <li>&copy; 2025 Jacob Tanner</li>
+            <li><a href="https://github.com/jtann5" target="_blank" rel="noopener noreferrer">GitHub</a></li>
+            <li><a href="https://www.linkedin.com/in/jacobytanner" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
+        </ul>
+    </footer>
 </body>
 </html>

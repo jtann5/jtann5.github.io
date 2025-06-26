@@ -1,0 +1,123 @@
+/* ===== Resume Section Headings ===== */
+.education h2,
+.experience h2,
+.projects h2,
+.skills h2 {
+  font-size: 1.75rem;
+  margin-bottom: 1rem;
+  border-bottom: 2px solid var(--text-color7);
+  padding-bottom: 0.5rem;
+}
+
+/* ===== Shared Date Styling ===== */
+.dates {
+  font-size: 0.95rem;
+  color: var(--text-color6);
+  margin: 0.25rem 0;
+}
+
+/* ===== Education Section ===== */
+.education-item {
+  margin-bottom: 1.5rem;
+}
+
+.degree {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin: 0;
+  color: var(--text-color3);
+}
+
+.institution {
+  font-size: 1.125rem;
+  font-weight: 500;
+  margin: 0.25rem 0;
+  color: var(--text-color4);
+}
+
+.location {
+  font-weight: 400;
+  color: var(--text-color5);
+}
+
+/* ===== Experience Section ===== */
+.experience-item {
+  margin-bottom: 2rem;
+}
+
+.job-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin: 0;
+  color: var(--text-color3);
+}
+
+.company {
+  font-size: 1.125rem;
+  font-weight: 500;
+  margin: 0.25rem 0;
+  color: var(--text-color4);
+}
+
+.responsibilities {
+  margin-top: 0.5rem;
+  padding-left: 1.25rem;
+  list-style-type: disc;
+  color: var(--text-color);
+  font-size: 0.95rem;
+}
+
+.responsibilities li {
+  margin-bottom: 0.4rem;
+}
+
+/* ===== Projects Section ===== */
+.project-item {
+  margin-bottom: 2rem;
+}
+
+.project-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin: 0;
+  color: var(--text-color3);
+}
+
+.project-details {
+  padding-left: 1.25rem;
+  list-style-type: disc;
+  color: var(--text-color);
+  font-size: 0.95rem;
+}
+
+.project-details li {
+  margin-bottom: 0.4rem;
+}
+
+/* ===== Skills Section ===== */
+.skills-list {
+  padding-left: 1.25rem;
+  font-size: 0.95rem;
+  color: var(--text-color);
+  list-style-type: disc;
+}
+
+.skills-list li {
+  margin-bottom: 0.5rem;
+  line-height: 1.5;
+}
+
+
+.resume-container {
+  max-width: 800px;       /* Limits width */
+  margin: 0 auto;         /* Centers horizontally */
+  padding: 1rem 1.5rem;   /* Comfortable padding */
+  box-sizing: border-box; /* Include padding in width */
+}
+
+@media (max-width: 600px) {
+  .resume-container {
+    max-width: 100%;
+    padding: 1rem;
+  }
+}
