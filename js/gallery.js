@@ -79,55 +79,55 @@ function initializeDots(galleryId) {
   document.addEventListener('DOMContentLoaded', () => {
     const galleryIds = ['gallery1', 'gallery1m', 'gallery2', 'gallery3', 'gallery4', 'gallery5'];
 
-    const galleries = {
-      gallery1: {
-        dir: "housing-portal",
-        images: ["dashboard", "all-requests", "login", "maintenance-request-form", "request-information",],
-        desc: ["Dashboard screen", "All requests page", "Login form", "Maintenance request form", "Maintenance request info"]
-      },
-      gallery1m: {
-        dir: "housing-portal",
-        images: ["dashboard-mobile", "all-requests-mobile", "login-mobile", "maintenance-request-form-mobile", "request-information-mobile", "navbar-mobile"],
-        desc: ["Dashboard screen", "All requests page", "Login form", "Maintenance request form", "Maintenance request info", "Navigation dropdown bar"]
-      },
-      gallery2: {
-        dir: "robotics",
-        images: ["robot-with-face", "robot-controller", "robot-off"],
-      },
-      gallery3: {
-        dir: "mastermind",
-        images: ["main-activity", "play-activity", "colors-demo", "dark-mode-demo", "options-activity"],
-        desc: []
-      },
-      gallery4: {
-        dir: "htmx",
-        images: ["homepage", "store", "store-filter", "store-search"],
-        desc: []
-      },
-      gallery5: {
-        dir: "microcontroller-system",
-        images: ["car", "back", "electronics"],
-        desc: ["Chem-E-Car vehicle", "Back of microcontroller system", "Microcontroller system internals"]
-      },
-    };
+    // const galleries = {
+    //   gallery1: {
+    //     dir: "housing-portal",
+    //     images: ["dashboard", "all-requests", "login", "maintenance-request-form", "request-information",],
+    //     desc: ["Dashboard screen", "All requests page", "Login form", "Maintenance request form", "Maintenance request info"]
+    //   },
+    //   gallery1m: {
+    //     dir: "housing-portal",
+    //     images: ["dashboard-mobile", "all-requests-mobile", "login-mobile", "maintenance-request-form-mobile", "request-information-mobile", "navbar-mobile"],
+    //     desc: ["Dashboard screen", "All requests page", "Login form", "Maintenance request form", "Maintenance request info", "Navigation dropdown bar"]
+    //   },
+    //   gallery2: {
+    //     dir: "robotics",
+    //     images: ["robot-with-face", "robot-controller", "robot-off"],
+    //   },
+    //   gallery3: {
+    //     dir: "mastermind",
+    //     images: ["main-activity", "play-activity", "colors-demo", "dark-mode-demo", "options-activity"],
+    //     desc: []
+    //   },
+    //   gallery4: {
+    //     dir: "htmx",
+    //     images: ["homepage", "store", "store-filter", "store-search"],
+    //     desc: []
+    //   },
+    //   gallery5: {
+    //     dir: "microcontroller-system",
+    //     images: ["car", "back", "electronics"],
+    //     desc: ["Chem-E-Car vehicle", "Back of microcontroller system", "Microcontroller system internals"]
+    //   },
+    // };
 
     galleryIds.forEach(galleryId => {
-      const container = document.getElementById(`${galleryId}-images`);
-      const gallery = galleries[galleryId];
+      // const container = document.getElementById(`${galleryId}-images`);
+      // const gallery = galleries[galleryId];
 
-      if (container && gallery && Array.isArray(gallery.images)) {
-        gallery.images.forEach((img, i) => {
-          const desc = gallery.desc?.[i] || `Photo ${i + 1}`;
-          const path = `images/${gallery.dir}/${img}`;
+      // if (container && gallery && Array.isArray(gallery.images)) {
+      //   gallery.images.forEach((img, i) => {
+      //     const desc = gallery.desc?.[i] || `Photo ${i + 1}`;
+      //     const path = `images/${gallery.dir}/${img}`;
 
-          container.innerHTML += `
-            <picture>
-              <source srcset="${path}.webp" type="image/webp">
-              <img src="${path}.jpeg" alt="${desc}">
-            </picture>
-          `;
-        });
-      }
+      //     container.innerHTML += `
+      //       <picture>
+      //         <source srcset="${path}.webp" type="image/webp">
+      //         <img src="${path}.jpeg" alt="${desc}">
+      //       </picture>
+      //     `;
+      //   });
+      // }
 
       initializeDots(galleryId);
     });
