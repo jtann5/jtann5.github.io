@@ -265,6 +265,13 @@ main {
   max-width: 1100px;
 }
 
+@media (max-width: 768px) {
+  main {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+}
+
 
 .contact-form {
   display: flex;
