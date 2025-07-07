@@ -1,89 +1,103 @@
-/* Try brand color: #6c63ff */
+/* 
+  ===============================
+  🎨 CSS Variable Reference Guide
+  ===============================
 
-/*
-    --primary-color: top nav and footer
-    --secondary-color: 
-    --background-color: background color for the page
-    --card-color: background color for cards
-    --text-color: main text color for page content
-    --text-color2: text color for nav and footer items
-    --text-hover: color for text hover on nav and footer
-    --brand-color: brand color for the website
-    --display-dark: specifies display type for dark elements
-    --display-light: specifies display type for light elements
+  ░░░ Layout & Surfaces ░░░
+  --page-bg           : Main page background color
+  --card-bg           : Background color for cards/sections
+  --ui-primary-bg     : Background for top nav and footer
+
+  ░░░ Text Colors ░░░
+  --text-primary      : Main body text color
+  --text-strong       : Strong headings (e.g. h1–h2)
+  --text-secondary    : Subheadings and emphasized text (e.g. h3–h4)
+  --text-tertiary     : Less prominent text (e.g. location, minor labels)
+  --text-meta         : Metadata (e.g. dates, captions)
+  --text-on-primary   : Text color shown on nav/footer backgrounds
+  --text-hover        : Hover state color for nav/footer links
+
+  ░░░ Borders & Lines ░░░
+  --border-subtle     : Light borders, underlines, separators
+
+  ░░░ Brand & Accent ░░░
+  --accent-color      : Brand color used for highlights, links, CTAs
+
+  ░░░ Display Utilities ░░░
+  --display-dark      : Used to toggle visibility of dark-specific elements
+  --display-light     : Used to toggle visibility of light-specific elements
 */
 
+/* Try brand color: #6c63ff */
+
 :root {
-    --primary-color: #12171e;
-    --secondary-color: #6c757d;
-    --background-color: #fff;
-    --card-color: #f9f9f9;
-    --text-color: #333;
-    --text-color2: white;
-    --text-color3: #222;
-    --text-color4: #444;
-    --text-color5: #666;
-    --text-color6: #777;
-    --text-color7: #ccc;
-    --text-hover: gray;
-    --brand-color: #1e90ff;
-    --display-dark: none;
-    --display-light: inline;
+  --page-bg: #fff;
+  --card-bg: #f9f9f9;
+  --ui-primary-bg: #12171e;
+  --text-primary: #333;
+  --text-strong: #222;
+  --text-secondary: #444;
+  --text-tertiary: #666;
+  --text-meta: #777;
+  --text-on-primary: white;
+  --text-hover: gray;
+  --border-subtle: #ccc;
+  --accent-color: #1e90ff;
+  --display-dark: none;
+  --display-light: inline;
 }
+
 @media (prefers-color-scheme: dark) {
-    :root {
-        --primary-color: #12171e;
-        --secondary-color: #6c757d;
-        --background-color: #0a0d10;
-        --card-color: #2a2a2a;
-        --text-color: white;
-        --text-color2: #6a6868;
-        --text-color3: #f1f1f1;
-        --text-color4: #bbb;
-        --text-color5: #888;
-        --text-color6: #777;
-        --text-color7: #444;
-        --text-hover: #3a3a3a;
-        --brand-color: #1e90ff;
-        --display-dark: inline;
-        --display-light: none;
-    }
+  :root {
+    --page-bg: #0a0d10;
+    --card-bg: #2a2a2a;
+    --ui-primary-bg: #12171e;
+    --text-primary: white;
+    --text-strong: #f1f1f1;
+    --text-secondary: #bbb;
+    --text-tertiary: #888;
+    --text-meta: #777;
+    --text-on-primary: #6a6868;
+    --text-hover: #3a3a3a;
+    --border-subtle: #444;
+    --accent-color: #1e90ff;
+    --display-dark: inline;
+    --display-light: none;
+  }
 }
 
 /* Manual override (light mode forced on) */
 .light-mode {
-    --primary-color: #12171e;
-    --secondary-color: #6c757d;
-    --background-color: #fff;
-    --card-color: #f9f9f9;
-    --text-color: #333;
-    --text-color2: white;
-    --text-color3: #222;
-    --text-color4: #444;
-    --text-color5: #666;
-    --text-color6: #777;
-    --text-color7: #ccc;
-    --text-hover: gray;
-    --brand-color: #1e90ff;
-    --display-dark: none;
-    --display-light: inline;
+  --page-bg: #fff;
+  --card-bg: #f9f9f9;
+  --ui-primary-bg: #12171e;
+  --text-primary: #333;
+  --text-strong: #222;
+  --text-secondary: #444;
+  --text-tertiary: #666;
+  --text-meta: #777;
+  --text-on-primary: white;
+  --text-hover: gray;
+  --border-subtle: #ccc;
+  --accent-color: #1e90ff;
+  --display-dark: none;
+  --display-light: inline;
 }
 
 /* Manual override (dark mode forced on) */
 .dark-mode {
-    --primary-color: #12171e;
-    --secondary-color: #6c757d;
-    --background-color: #0a0d10;
-    --card-color: #2a2a2a;
-    --text-color: white;
-    --text-color2: #6a6868;
-    --text-color3: #f1f1f1;
-    --text-color4: #bbb;
-    --text-color5: #888;
-    --text-color6: #777;
-    --text-color7: #444;
-    --text-hover: #3a3a3a;
-    --brand-color: #1e90ff;
-    --display-dark: inline;
-    --display-light: none;
+  --page-bg: #0a0d10;
+  --card-bg: #2a2a2a;
+  --ui-primary-bg: #12171e;
+  --text-primary: white;
+  --text-strong: #f1f1f1;
+  --text-secondary: #bbb;
+  --text-tertiary: #888;
+  --text-meta: #777;
+  --text-on-primary: #6a6868;
+  --text-hover: #3a3a3a;
+  --border-subtle: #444;
+  --accent-color: #1e90ff;
+  --display-dark: inline;
+  --display-light: none;
 }

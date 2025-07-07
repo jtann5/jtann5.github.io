@@ -77,7 +77,7 @@
   }
   
   .dots .active {
-    background: white;
+    background: #e0e0e0;
   }
   
   @media (max-width: 768px) {

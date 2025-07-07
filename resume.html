@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta name="robots" content="noarchive">
     <meta charset="UTF-8">
@@ -7,7 +8,7 @@
     <title>Resume | Jacob Tanner</title>
 
     <script>
-        (function() {
+        (function () {
             const savedTheme = localStorage.getItem('theme');
             if (savedTheme === 'dark') document.documentElement.classList.add('dark-mode');
             else if (savedTheme === 'light') document.documentElement.classList.add('light-mode');
@@ -24,20 +25,38 @@
     <meta name="apple-mobile-web-app-title" content="Jacob Tanner" />
     <link rel="manifest" href="icons/site.webmanifest" />
 </head>
+
 <body>
     <nav>
         <a href="index.html" class="logo">Jacob Tanner</a>
-        <select id="theme-select" aria-label="Select theme">
-            <option value="system">🖥️ System Default</option>
-            <option value="light">🌞 Light</option>
-            <option value="dark">🌙 Dark</option>
-        </select>
-        <script src="js/darkmode.js"></script>
-        <ul>
+
+        <div class="nav-right">
+            <button id="theme-toggle" aria-label="Theme dropdown">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                    class="bi bi-moon-fill" viewBox="0 0 16 16">
+                    <path
+                        d="M6 .278a.77.77 0 0 1 .08.858 7.2 7.2 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277q.792-.001 1.533-.16a.79.79 0 0 1 .81.316.73.73 0 0 1-.031.893A8.35 8.35 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.75.75 0 0 1 6 .278" />
+                </svg>
+            </button>
+            <div id="theme-dropdown" class="theme-dropdown hidden">
+                <button data-theme="system">🖥️ System Default</button>
+                <button data-theme="light">☀️ Light Mode</button>
+                <button data-theme="dark">🌙 Dark Mode</button>
+            </div>
+
+            <button id="menu-toggle" aria-label="Toggle menu" class="menu-icon">
+                <span class="bar top"></span>
+                <span class="bar middle"></span>
+                <span class="bar bottom"></span>
+            </button>
+        </div>
+
+        <ul id="nav-links">
             <li><a href="portfolio.html">Portfolio</a></li>
-            <li><a href="resume.html" class="active">Resume</a></li>
+            <li><a href="resume.html">Resume</a></li>
             <li><a href="about.html">About</a></li>
         </ul>
+        <script src="js/nav.js"></script>
     </nav>
     <main class="resume-container">
         <h1>My Resume</h1>
@@ -63,8 +82,10 @@
                 <p class="dates">Nov 2022 - Dec 2024</p>
                 <h4 class="company">Montana State University <span class="location">| Bozeman, MT</span></h4>
                 <ul class="responsibilities">
-                    <li>Imaged computers with MDT, configured them in Active Directory, and assisted users with setup</li>
-                    <li>Diagnosed software and hardware issues, and communicated with users through a ticketing system</li>
+                    <li>Imaged computers with MDT, configured them in Active Directory, and assisted users with setup
+                    </li>
+                    <li>Diagnosed software and hardware issues, and communicated with users through a ticketing system
+                    </li>
                     <li>Serviced computers for faculty, staff, and departments</li>
                 </ul>
             </div>
@@ -76,11 +97,13 @@
                 <h3 class="project-title">HRDC Housing Maintenance Portal</h3>
                 <p class="dates">Spring 2024</h5>
                 <ul class="project-details">
-                    <li>Developed a web application for the HRDC, a nonprofit providing housing and essential services to
+                    <li>Developed a web application for the HRDC, a nonprofit providing housing and essential services
+                        to
                         Bozeman residents, for managing tenant maintenance requests</li>
                     <li>Engaged with the HRDC representative to gather requirements and incorporate feedback, in
                         coordination with the course professor</li>
-                    <li>Collaborated with a team of four, conducting two weekly scrum meetings to discuss work distribution</li>
+                    <li>Collaborated with a team of four, conducting two weekly scrum meetings to discuss work
+                        distribution</li>
                     <li>Utilized Django, PostgreSQL, NGINX, Gunicorn, HTML, CSS, Bootstrap5, HTMX, and JavaScript</li>
                 </ul>
             </div>
@@ -88,10 +111,13 @@
                 <h3 class="project-title">Embedded Systems Robotics</h3>
                 <p class="dates">Spring 2024</p>
                 <ul class="project-details">
-                    <li>Built a web application with Flask and JavaScript to control various functions of the robot manually</li>
+                    <li>Built a web application with Flask and JavaScript to control various functions of the robot
+                        manually</li>
                     <li>Leveraged multithreading to facilitate concurrent movements and actions</li>
-                    <li>Worked with a partner to integrate text-to-speech, OpenAI's Assistants API, speech recognition, UWB
-                        localization with vector mathematics, and an ultrasonic sensor, enabling the robot to act as a door
+                    <li>Worked with a partner to integrate text-to-speech, OpenAI's Assistants API, speech recognition,
+                        UWB
+                        localization with vector mathematics, and an ultrasonic sensor, enabling the robot to act as a
+                        door
                         greeter that guides users to specified quadrants and answers their questions</li>
                 </ul>
             </div>
@@ -99,12 +125,15 @@
                 <h3 class="project-title">Chem-E-Car Microcontroller System</h3>
                 <p class="dates">Spring 2023</p>
                 <ul class="project-details">
-                    <li>Designed and implemented a C++-based control system using two Arduinos, a motor controller, relay,
-                        solenoid valve, photosensor, LCD, joystick, and electrical components to manage the start and stop
+                    <li>Designed and implemented a C++-based control system using two Arduinos, a motor controller,
+                        relay,
+                        solenoid valve, photosensor, LCD, joystick, and electrical components to manage the start and
+                        stop
                         reaction for a Chem-E-Car competition</li>
                     <li>Cooperated with chemical engineers to ensure the system met functional requirements</li>
                     <li>Created a user interface with menus for testing, competition use, and reaction monitoring</li>
-                    <li>Incorporated an Easter egg that played “Take on Me,” helping the team win 1st place in the poster
+                    <li>Incorporated an Easter egg that played “Take on Me,” helping the team win 1st place in the
+                        poster
                         competition</li>
                 </ul>
             </div>
@@ -123,8 +152,10 @@
         <ul>
             <li>&copy; 2025 Jacob Tanner</li>
             <li><a href="https://github.com/jtann5" target="_blank" rel="noopener noreferrer">GitHub</a></li>
-            <li><a href="https://www.linkedin.com/in/jacobytanner" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
+            <li><a href="https://www.linkedin.com/in/jacobytanner" target="_blank"
+                    rel="noopener noreferrer">LinkedIn</a></li>
         </ul>
     </footer>
 </body>
+
 </html>

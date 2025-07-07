@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta name="robots" content="noarchive">
     <meta charset="UTF-8">
@@ -7,7 +8,7 @@
     <title>Jacob Tanner</title>
 
     <script>
-        (function() {
+        (function () {
             const savedTheme = localStorage.getItem('theme');
             if (savedTheme === 'dark') document.documentElement.classList.add('dark-mode');
             else if (savedTheme === 'light') document.documentElement.classList.add('light-mode');
@@ -24,31 +25,52 @@
     <meta name="apple-mobile-web-app-title" content="Jacob Tanner" />
     <link rel="manifest" href="icons/site.webmanifest" />
 </head>
+
 <body>
     <nav>
         <a href="index.html" class="logo">Jacob Tanner</a>
-        <select id="theme-select" aria-label="Select theme">
-            <option value="system">🖥️ System Default</option>
-            <option value="light">🌞 Light</option>
-            <option value="dark">🌙 Dark</option>
-        </select>
-        <script src="js/darkmode.js"></script>
-        <ul>
+
+        <div class="nav-right">
+            <button id="theme-toggle" aria-label="Theme dropdown">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                    class="bi bi-moon-fill" viewBox="0 0 16 16">
+                    <path
+                        d="M6 .278a.77.77 0 0 1 .08.858 7.2 7.2 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277q.792-.001 1.533-.16a.79.79 0 0 1 .81.316.73.73 0 0 1-.031.893A8.35 8.35 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.75.75 0 0 1 6 .278" />
+                </svg>
+            </button>
+            <div id="theme-dropdown" class="theme-dropdown hidden">
+                <button data-theme="system">🖥️ System Default</button>
+                <button data-theme="light">☀️ Light Mode</button>
+                <button data-theme="dark">🌙 Dark Mode</button>
+            </div>
+
+            <button id="menu-toggle" aria-label="Toggle menu" class="menu-icon">
+                <span class="bar top"></span>
+                <span class="bar middle"></span>
+                <span class="bar bottom"></span>
+            </button>
+        </div>
+
+        <ul id="nav-links">
             <li><a href="portfolio.html">Portfolio</a></li>
             <li><a href="resume.html">Resume</a></li>
             <li><a href="about.html">About</a></li>
         </ul>
+        <script src="js/nav.js"></script>
     </nav>
     <main>
         <h1>Hi, I'm Jacob Tanner</h1>
-        <p>I'm a graduate Computer Science student at Montana State University. <a href="about.html" class="underline-slide">Learn more about me.</a></p>
+        <p>I'm a graduate Computer Science student at Montana State University. <a href="about.html"
+                class="underline-slide">Learn more about me.</a></p>
         <p><a href="portfolio.html" class="underline-slide">View My Work &rarr;</a></p>
         <p><a href="resume.html" class="underline-slide">View My Experience and Education &rarr;</a></p>
-        <p>Have a project in mind or just want to chat? <a href="about.html#contact" class="underline-slide">Let's connect</a>.</p>
+        <p>Have a project in mind or just want to chat? <a href="about.html#contact" class="underline-slide">Let's
+                connect</a>.</p>
 
         <h2>Featured projects</h2>
         <div class="featured-projects">
-            <div class="project-preview" onclick="window.location.href='portfolio.html#housing-portal'" style="cursor: pointer;">
+            <div class="project-preview" onclick="window.location.href='portfolio.html#housing-portal'"
+                style="cursor: pointer;">
                 <picture>
                     <source srcset="images/housing-portal/dashboard.webp" type="image/webp">
                     <img src="images/housing-portal/dashboard.jpeg" alt="Dashboard of HRDC housing portal">
@@ -60,7 +82,8 @@
                     <a href="portfolio.html#housing-portal" class="underline-slide">View More &rarr;</a>
                 </div>
             </div>
-            <div class="project-preview" onclick="window.location.href='portfolio.html#microcontroller-system'" style="cursor: pointer;">
+            <div class="project-preview" onclick="window.location.href='portfolio.html#microcontroller-system'"
+                style="cursor: pointer;">
                 <picture>
                     <source srcset="images/microcontroller-system/car.webp" type="image/webp">
                     <img src="images/microcontroller-system/car.jpeg" alt="Chem-E-Car">
@@ -78,8 +101,10 @@
         <ul>
             <li>&copy; 2025 Jacob Tanner</li>
             <li><a href="https://github.com/jtann5" target="_blank" rel="noopener noreferrer">GitHub</a></li>
-            <li><a href="https://www.linkedin.com/in/jacobytanner" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
+            <li><a href="https://www.linkedin.com/in/jacobytanner" target="_blank"
+                    rel="noopener noreferrer">LinkedIn</a></li>
         </ul>
     </footer>
 </body>
+
 </html>

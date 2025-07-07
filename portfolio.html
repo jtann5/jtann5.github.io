@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta name="robots" content="noarchive">
     <meta charset="UTF-8">
@@ -7,7 +8,7 @@
     <title>Portfolio | Jacob Tanner</title>
 
     <script>
-        (function() {
+        (function () {
             const savedTheme = localStorage.getItem('theme');
             if (savedTheme === 'dark') document.documentElement.classList.add('dark-mode');
             else if (savedTheme === 'light') document.documentElement.classList.add('light-mode');
@@ -26,21 +27,38 @@
     <meta name="apple-mobile-web-app-title" content="Jacob Tanner" />
     <link rel="manifest" href="icons/site.webmanifest" />
 </head>
+
 <body>
     <nav>
         <a href="index.html" class="logo">Jacob Tanner</a>
-        <select id="theme-select" aria-label="Select theme">
-            <option value="system">🖥️ System Default</option>
-            <option value="light">🌞 Light</option>
-            <option value="dark">🌙 Dark</option>
-        </select>
-        <script src="js/darkmode.js"></script>
-        <ul>
-            <li><a href="portfolio.html" class="active">Portfolio</a></li>
+
+        <div class="nav-right">
+            <button id="theme-toggle" aria-label="Theme dropdown">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                    class="bi bi-moon-fill" viewBox="0 0 16 16">
+                    <path
+                        d="M6 .278a.77.77 0 0 1 .08.858 7.2 7.2 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277q.792-.001 1.533-.16a.79.79 0 0 1 .81.316.73.73 0 0 1-.031.893A8.35 8.35 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.75.75 0 0 1 6 .278" />
+                </svg>
+            </button>
+            <div id="theme-dropdown" class="theme-dropdown hidden">
+                <button data-theme="system">🖥️ System Default</button>
+                <button data-theme="light">☀️ Light Mode</button>
+                <button data-theme="dark">🌙 Dark Mode</button>
+            </div>
+
+            <button id="menu-toggle" aria-label="Toggle menu" class="menu-icon">
+                <span class="bar top"></span>
+                <span class="bar middle"></span>
+                <span class="bar bottom"></span>
+            </button>
+        </div>
+
+        <ul id="nav-links">
+            <li><a href="portfolio.html">Portfolio</a></li>
             <li><a href="resume.html">Resume</a></li>
             <li><a href="about.html">About</a></li>
-
         </ul>
+        <script src="js/nav.js"></script>
     </nav>
     <main>
         <h1>Portfolio Projects</h1>
@@ -52,10 +70,12 @@
                     Bozeman residents, for managing tenant maintenance requests</li>
                 <li>Engaged with the HRDC representative to gather requirements and incorporate feedback, in
                     coordination with the course professor</li>
-                <li>Collaborated with a team of four, conducting two weekly scrum meetings to discuss work distribution</li>
+                <li>Collaborated with a team of four, conducting two weekly scrum meetings to discuss work distribution
+                </li>
                 <li>Utilized Django, PostgreSQL, NGINX, Gunicorn, HTML, CSS, Bootstrap5, HTMX, and JavaScript</li>
             </ul>
-            <a href="https://github.com/jtann5/HRDC_Housing_Portal" target="_blank" rel="noopener noreferrer" class="underline-slide">View on GitHub &rarr;</a>
+            <a href="https://github.com/jtann5/HRDC_Housing_Portal" target="_blank" rel="noopener noreferrer"
+                class="underline-slide">View on GitHub &rarr;</a>
             <br><br>
             <div class="gallery-wrapper" id="gallery1">
                 <button class="arrow left" onclick="scrollGallery(-1, 'gallery1')">&#10094;</button>
@@ -86,34 +106,35 @@
             <div class="dots" id="gallery1-dots"></div>
 
             <div class="gallery-wrapper" id="gallery1m">
-            <button class="arrow left" onclick="scrollGallery(-1, 'gallery1m')">&#10094;</button>
-            <div class="gallery" id="gallery1m-images">
-                <picture>
-                    <source srcset="images/housing-portal/dashboard-mobile.webp" type="image/webp">
-                    <img src="images/housing-portal/dashboard-mobile.jpeg" alt="Dashboard screen">
-                </picture>
-                <picture>
-                    <source srcset="images/housing-portal/all-requests-mobile.webp" type="image/webp">
-                    <img src="images/housing-portal/all-requests-mobile.jpeg" alt="All requests page">
-                </picture>
-                <picture>
-                    <source srcset="images/housing-portal/login-mobile.webp" type="image/webp">
-                    <img src="images/housing-portal/login-mobile.jpeg" alt="Login form">
-                </picture>
-                <picture>
-                    <source srcset="images/housing-portal/maintenance-request-form-mobile.webp" type="image/webp">
-                    <img src="images/housing-portal/maintenance-request-form-mobile.jpeg" alt="Maintenance request form">
-                </picture>
-                <picture>
-                    <source srcset="images/housing-portal/request-information-mobile.webp" type="image/webp">
-                    <img src="images/housing-portal/request-information-mobile.jpeg" alt="Maintenance request info">
-                </picture>
-                <picture>
-                    <source srcset="images/housing-portal/navbar-mobile.webp" type="image/webp">
-                    <img src="images/housing-portal/navbar-mobile.jpeg" alt="Navigation dropdown bar">
-                </picture>
-            </div>
-            <button class="arrow right" onclick="scrollGallery(1, 'gallery1m')">&#10095;</button>
+                <button class="arrow left" onclick="scrollGallery(-1, 'gallery1m')">&#10094;</button>
+                <div class="gallery" id="gallery1m-images">
+                    <picture>
+                        <source srcset="images/housing-portal/dashboard-mobile.webp" type="image/webp">
+                        <img src="images/housing-portal/dashboard-mobile.jpeg" alt="Dashboard screen">
+                    </picture>
+                    <picture>
+                        <source srcset="images/housing-portal/all-requests-mobile.webp" type="image/webp">
+                        <img src="images/housing-portal/all-requests-mobile.jpeg" alt="All requests page">
+                    </picture>
+                    <picture>
+                        <source srcset="images/housing-portal/login-mobile.webp" type="image/webp">
+                        <img src="images/housing-portal/login-mobile.jpeg" alt="Login form">
+                    </picture>
+                    <picture>
+                        <source srcset="images/housing-portal/maintenance-request-form-mobile.webp" type="image/webp">
+                        <img src="images/housing-portal/maintenance-request-form-mobile.jpeg"
+                            alt="Maintenance request form">
+                    </picture>
+                    <picture>
+                        <source srcset="images/housing-portal/request-information-mobile.webp" type="image/webp">
+                        <img src="images/housing-portal/request-information-mobile.jpeg" alt="Maintenance request info">
+                    </picture>
+                    <picture>
+                        <source srcset="images/housing-portal/navbar-mobile.webp" type="image/webp">
+                        <img src="images/housing-portal/navbar-mobile.jpeg" alt="Navigation dropdown bar">
+                    </picture>
+                </div>
+                <button class="arrow right" onclick="scrollGallery(1, 'gallery1m')">&#10095;</button>
             </div>
             <div class="dots" id="gallery1m-dots"></div>
         </div>
@@ -121,30 +142,32 @@
             <h2 id="robotics">Embedded Systems Robotics</h2>
             <h5>Spring 2024</h5>
             <ul>
-                <li>Built a web application with Flask and JavaScript to control various functions of the robot manually</li>
+                <li>Built a web application with Flask and JavaScript to control various functions of the robot manually
+                </li>
                 <li>Leveraged multithreading to facilitate concurrent movements and actions</li>
                 <li>Worked with a partner to integrate text-to-speech, OpenAI's Assistants API, speech recognition, UWB
                     localization with vector mathematics, and an ultrasonic sensor, enabling the robot to act as a door
                     greeter that guides users to specified quadrants and answers their questions</li>
             </ul>
-            <a href="https://github.com/jtann5/ROB" target="_blank" rel="noopener noreferrer" class="underline-slide">View on GitHub &rarr;</a>
+            <a href="https://github.com/jtann5/ROB" target="_blank" rel="noopener noreferrer"
+                class="underline-slide">View on GitHub &rarr;</a>
             <br><br>
             <div class="gallery-wrapper" id="gallery2">
                 <button class="arrow left" onclick="scrollGallery(-1, 'gallery2')">&#10094;</button>
                 <div class="gallery" id="gallery2-images">
-                <!-- Dynamically inserted via JavaScript -->
-                <picture>
-                    <source srcset="images/robotics/robot-with-face.webp" type="image/webp">
-                    <img src="images/robotics/robot-with-face.jpeg" alt="Photo 1">
-                </picture>
-                <picture>
-                    <source srcset="images/robotics/robot-controller.webp" type="image/webp">
-                    <img src="images/robotics/robot-controller.jpeg" alt="Photo 2">
-                </picture>
-                <picture>
-                    <source srcset="images/robotics/robot-off.webp" type="image/webp">
-                    <img src="images/robotics/robot-off.jpeg" alt="Photo 3">
-                </picture>
+                    <!-- Dynamically inserted via JavaScript -->
+                    <picture>
+                        <source srcset="images/robotics/robot-with-face.webp" type="image/webp">
+                        <img src="images/robotics/robot-with-face.jpeg" alt="Photo 1">
+                    </picture>
+                    <picture>
+                        <source srcset="images/robotics/robot-controller.webp" type="image/webp">
+                        <img src="images/robotics/robot-controller.jpeg" alt="Photo 2">
+                    </picture>
+                    <picture>
+                        <source srcset="images/robotics/robot-off.webp" type="image/webp">
+                        <img src="images/robotics/robot-off.jpeg" alt="Photo 3">
+                    </picture>
                 </div>
                 <button class="arrow right" onclick="scrollGallery(1, 'gallery2')">&#10095;</button>
             </div>
@@ -158,31 +181,32 @@
                 <li>Integrated music and sound effects into the app and presented the implementation to the class</li>
                 <li>Implemented data storage for user preferences and game statistics</li>
             </ul>
-            <a href="https://github.com/jtann5/Mastermind" target="_blank" rel="noopener noreferrer" class="underline-slide">View on GitHub &rarr;</a>
+            <a href="https://github.com/jtann5/Mastermind" target="_blank" rel="noopener noreferrer"
+                class="underline-slide">View on GitHub &rarr;</a>
             <br><br>
             <div class="gallery-wrapper" id="gallery3">
                 <button class="arrow left" onclick="scrollGallery(-1, 'gallery3')">&#10094;</button>
                 <div class="gallery" id="gallery3-images">
-                <picture>
-                    <source srcset="images/mastermind/main-activity.webp" type="image/webp">
-                    <img src="images/mastermind/main-activity.jpeg" alt="Photo 1">
-                </picture>
-                <picture>
-                    <source srcset="images/mastermind/play-activity.webp" type="image/webp">
-                    <img src="images/mastermind/play-activity.jpeg" alt="Photo 2">
-                </picture>
-                <picture>
-                    <source srcset="images/mastermind/colors-demo.webp" type="image/webp">
-                    <img src="images/mastermind/colors-demo.jpeg" alt="Photo 3">
-                </picture>
-                <picture>
-                    <source srcset="images/mastermind/dark-mode-demo.webp" type="image/webp">
-                    <img src="images/mastermind/dark-mode-demo.jpeg" alt="Photo 4">
-                </picture>
-                <picture>
-                    <source srcset="images/mastermind/options-activity.webp" type="image/webp">
-                    <img src="images/mastermind/options-activity.jpeg" alt="Photo 5">
-                </picture>
+                    <picture>
+                        <source srcset="images/mastermind/main-activity.webp" type="image/webp">
+                        <img src="images/mastermind/main-activity.jpeg" alt="Photo 1">
+                    </picture>
+                    <picture>
+                        <source srcset="images/mastermind/play-activity.webp" type="image/webp">
+                        <img src="images/mastermind/play-activity.jpeg" alt="Photo 2">
+                    </picture>
+                    <picture>
+                        <source srcset="images/mastermind/colors-demo.webp" type="image/webp">
+                        <img src="images/mastermind/colors-demo.jpeg" alt="Photo 3">
+                    </picture>
+                    <picture>
+                        <source srcset="images/mastermind/dark-mode-demo.webp" type="image/webp">
+                        <img src="images/mastermind/dark-mode-demo.jpeg" alt="Photo 4">
+                    </picture>
+                    <picture>
+                        <source srcset="images/mastermind/options-activity.webp" type="image/webp">
+                        <img src="images/mastermind/options-activity.jpeg" alt="Photo 5">
+                    </picture>
                 </div>
                 <button class="arrow right" onclick="scrollGallery(1, 'gallery3')">&#10095;</button>
             </div>
@@ -195,27 +219,28 @@
                 <li>Developed a website implementing HTMX with a Flask backend</li>
                 <li>Utilized Flask to query SQLite database</li>
             </ul>
-            <a href="https://github.com/jtann5/HTMX" target="_blank" rel="noopener noreferrer" class="underline-slide">View on GitHub &rarr;</a>
+            <a href="https://github.com/jtann5/HTMX" target="_blank" rel="noopener noreferrer"
+                class="underline-slide">View on GitHub &rarr;</a>
             <br><br>
             <div class="gallery-wrapper" id="gallery4">
                 <button class="arrow left" onclick="scrollGallery(-1, 'gallery4')">&#10094;</button>
                 <div class="gallery" id="gallery4-images">
-                <picture>
-                    <source srcset="images/htmx/homepage.webp" type="image/webp">
-                    <img src="images/htmx/homepage.jpeg" alt="Photo 1">
-                </picture>
-                <picture>
-                    <source srcset="images/htmx/store.webp" type="image/webp">
-                    <img src="images/htmx/store.jpeg" alt="Photo 2">
-                </picture>
-                <picture>
-                    <source srcset="images/htmx/store-filter.webp" type="image/webp">
-                    <img src="images/htmx/store-filter.jpeg" alt="Photo 3">
-                </picture>
-                <picture>
-                    <source srcset="images/htmx/store-search.webp" type="image/webp">
-                    <img src="images/htmx/store-search.jpeg" alt="Photo 4">
-                </picture>
+                    <picture>
+                        <source srcset="images/htmx/homepage.webp" type="image/webp">
+                        <img src="images/htmx/homepage.jpeg" alt="Photo 1">
+                    </picture>
+                    <picture>
+                        <source srcset="images/htmx/store.webp" type="image/webp">
+                        <img src="images/htmx/store.jpeg" alt="Photo 2">
+                    </picture>
+                    <picture>
+                        <source srcset="images/htmx/store-filter.webp" type="image/webp">
+                        <img src="images/htmx/store-filter.jpeg" alt="Photo 3">
+                    </picture>
+                    <picture>
+                        <source srcset="images/htmx/store-search.webp" type="image/webp">
+                        <img src="images/htmx/store-search.jpeg" alt="Photo 4">
+                    </picture>
                 </div>
                 <button class="arrow right" onclick="scrollGallery(1, 'gallery4')">&#10095;</button>
             </div>
@@ -233,30 +258,35 @@
                 <li>Incorporated an Easter egg that played “Take on Me,” helping the team win 1st place in the poster
                     competition</li>
             </ul>
-            <a href="https://github.com/jtann5/ChemE-Car-2023" target="_blank" rel="noopener noreferrer" class="underline-slide">View on GitHub &rarr;</a>
+            <a href="https://github.com/jtann5/ChemE-Car-2023" target="_blank" rel="noopener noreferrer"
+                class="underline-slide">View on GitHub &rarr;</a>
             <br><br>
             <div class="gallery-wrapper" id="gallery5">
                 <button class="arrow left" onclick="scrollGallery(-1, 'gallery5')">&#10094;</button>
                 <div class="gallery" id="gallery5-images" id="gallery5">
-                <picture>
-                    <source srcset="images/microcontroller-system/car.webp" type="image/webp">
-                    <img src="images/microcontroller-system/car.jpeg" alt="Chem-E-Car vehicle">
-                </picture>
-                <picture>
-                    <source srcset="images/microcontroller-system/back.webp" type="image/webp">
-                    <img src="images/microcontroller-system/back.jpeg" alt="Back of microcontroller system">
-                </picture>
-                <picture>
-                    <source srcset="images/microcontroller-system/electronics.webp" type="image/webp">
-                    <img src="images/microcontroller-system/electronics.jpeg" alt="Microcontroller system internals">
-                </picture>
+                    <picture>
+                        <source srcset="images/microcontroller-system/car.webp" type="image/webp">
+                        <img src="images/microcontroller-system/car.jpeg" alt="Chem-E-Car vehicle">
+                    </picture>
+                    <picture>
+                        <source srcset="images/microcontroller-system/back.webp" type="image/webp">
+                        <img src="images/microcontroller-system/back.jpeg" alt="Back of microcontroller system">
+                    </picture>
+                    <picture>
+                        <source srcset="images/microcontroller-system/electronics.webp" type="image/webp">
+                        <img src="images/microcontroller-system/electronics.jpeg"
+                            alt="Microcontroller system internals">
+                    </picture>
                 </div>
                 <button class="arrow right" onclick="scrollGallery(1, 'gallery5')">&#10095;</button>
             </div>
             <div class="dots" id="gallery5-dots"></div>
 
             <div class="video-container">
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/sEzAx5g2JGE?si=cDI4ax0xXyQPa3xf" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/sEzAx5g2JGE?si=cDI4ax0xXyQPa3xf"
+                    title="YouTube video player" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
             </div>
         </div>
     </main>
@@ -264,8 +294,10 @@
         <ul>
             <li>&copy; 2025 Jacob Tanner</li>
             <li><a href="https://github.com/jtann5" target="_blank" rel="noopener noreferrer">GitHub</a></li>
-            <li><a href="https://www.linkedin.com/in/jacobytanner" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
+            <li><a href="https://www.linkedin.com/in/jacobytanner" target="_blank"
+                    rel="noopener noreferrer">LinkedIn</a></li>
         </ul>
     </footer>
 </body>
+
 </html>

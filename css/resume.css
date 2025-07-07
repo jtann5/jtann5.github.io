@@ -5,14 +5,14 @@
 .skills h2 {
   font-size: 1.75rem;
   margin-bottom: 1rem;
-  border-bottom: 2px solid var(--text-color7);
+  border-bottom: 2px solid var(--border-subtle);
   padding-bottom: 0.5rem;
 }
 
 /* ===== Shared Date Styling ===== */
 .dates {
   font-size: 0.95rem;
-  color: var(--text-color6);
+  color: var(--text-meta);
   margin: 0.25rem 0;
 }
 
@@ -25,19 +25,19 @@
   font-size: 1.25rem;
   font-weight: 600;
   margin: 0;
-  color: var(--text-color3);
+  color: var(--text-strong);
 }
 
 .institution {
   font-size: 1.125rem;
   font-weight: 500;
   margin: 0.25rem 0;
-  color: var(--text-color4);
+  color: var(--text-secondary);
 }
 
 .location {
   font-weight: 400;
-  color: var(--text-color5);
+  color: var(--text-tertiary);
 }
 
 /* ===== Experience Section ===== */
@@ -49,21 +49,21 @@
   font-size: 1.25rem;
   font-weight: 600;
   margin: 0;
-  color: var(--text-color3);
+  color: var(--text-strong);
 }
 
 .company {
   font-size: 1.125rem;
   font-weight: 500;
   margin: 0.25rem 0;
-  color: var(--text-color4);
+  color: var(--text-secondary);
 }
 
 .responsibilities {
   margin-top: 0.5rem;
   padding-left: 1.25rem;
   list-style-type: disc;
-  color: var(--text-color);
+  color: var(--text-primary);
   font-size: 0.95rem;
 }
 
@@ -80,13 +80,13 @@
   font-size: 1.25rem;
   font-weight: 600;
   margin: 0;
-  color: var(--text-color3);
+  color: var(--text-strong);
 }
 
 .project-details {
   padding-left: 1.25rem;
   list-style-type: disc;
-  color: var(--text-color);
+  color: var(--text-primary);
   font-size: 0.95rem;
 }
 
@@ -98,7 +98,7 @@
 .skills-list {
   padding-left: 1.25rem;
   font-size: 0.95rem;
-  color: var(--text-color);
+  color: var(--text-primary);
   list-style-type: disc;
 }
 
@@ -111,7 +111,6 @@
 .resume-container {
   max-width: 800px;       /* Limits width */
   margin: 0 auto;         /* Centers horizontally */
-  padding: 1rem 1.5rem;   /* Comfortable padding */
   box-sizing: border-box; /* Include padding in width */
 }
 
