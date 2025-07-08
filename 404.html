@@ -28,17 +28,34 @@
 <body>
     <nav>
         <a href="index.html" class="logo">Jacob Tanner</a>
-        <select id="theme-select" aria-label="Select theme">
-            <option value="system">🖥️ System Default</option>
-            <option value="light">🌞 Light</option>
-            <option value="dark">🌙 Dark</option>
-        </select>
-        <script src="js/darkmode.js"></script>
-        <ul>
+
+        <div class="nav-right">
+            <button id="theme-toggle" aria-label="Theme dropdown">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                    class="bi bi-moon-fill" viewBox="0 0 16 16">
+                    <path
+                        d="M6 .278a.77.77 0 0 1 .08.858 7.2 7.2 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277q.792-.001 1.533-.16a.79.79 0 0 1 .81.316.73.73 0 0 1-.031.893A8.35 8.35 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.75.75 0 0 1 6 .278" />
+                </svg>
+            </button>
+            <div id="theme-dropdown" class="theme-dropdown hidden">
+                <button data-theme="system">🖥️ System Default</button>
+                <button data-theme="light">☀️ Light Mode</button>
+                <button data-theme="dark">🌙 Dark Mode</button>
+            </div>
+
+            <button id="menu-toggle" aria-label="Toggle menu" class="menu-icon">
+                <span class="bar top"></span>
+                <span class="bar middle"></span>
+                <span class="bar bottom"></span>
+            </button>
+        </div>
+
+        <ul id="nav-links">
             <li><a href="portfolio.html">Portfolio</a></li>
             <li><a href="resume.html">Resume</a></li>
             <li><a href="about.html">About</a></li>
         </ul>
+        <script src="js/nav.js"></script>
     </nav>
     <main>
         <div class="container">
