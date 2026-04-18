@@ -92,7 +92,7 @@ function updateActiveDot(gallery, galleryId) {
 
 // Initialize all galleries and their respective dots
 document.addEventListener('DOMContentLoaded', () => {
-  const galleryIds = ['gallery1', 'gallery1m', 'gallery2', 'gallery3', 'gallery4', 'gallery5'];
+  const galleryIds = ['gallery1', 'gallery1m', 'gallery2', 'gallery3', 'gallery4'];
 
   // const galleries = {
   //   gallery1: {
@@ -115,11 +115,6 @@ document.addEventListener('DOMContentLoaded', () => {
   //     desc: []
   //   },
   //   gallery4: {
-  //     dir: "htmx",
-  //     images: ["homepage", "store", "store-filter", "store-search"],
-  //     desc: []
-  //   },
-  //   gallery5: {
   //     dir: "microcontroller-system",
   //     images: ["car", "back", "electronics"],
   //     desc: ["Chem-E-Car vehicle", "Back of microcontroller system", "Microcontroller system internals"]
