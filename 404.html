@@ -1,89 +1,164 @@
 <!DOCTYPE html>
 <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Page Not Found | Jacob Tanner</title>
+        <script>
+            (function () {
+                const t = localStorage.getItem("theme");
+                if (t === "dark") document.documentElement.classList.add("dark-mode");
+                else if (t === "light") document.documentElement.classList.add("light-mode");
+            })();
+        </script>
+        <link rel="stylesheet" href="css/global.css">
+        <link rel="stylesheet" href="css/404.css">
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Error 404 | Jacob Tanner</title>
-
-    <script>
-        (function () {
-            const savedTheme = localStorage.getItem('theme');
-            if (savedTheme === 'dark') document.documentElement.classList.add('dark-mode');
-            else if (savedTheme === 'light') document.documentElement.classList.add('light-mode');
-        })();
-    </script>
-
-    <link rel="stylesheet" href="css/global.css">
-    <link rel="stylesheet" href="css/404.css">
-
-    <link rel="icon" type="image/png" href="icons/favicon-96x96.png" sizes="96x96" />
-    <link rel="icon" type="image/svg+xml" href="icons/favicon.svg" />
-    <link rel="shortcut icon" href="icons/favicon.ico" />
-    <link rel="apple-touch-icon" sizes="180x180" href="icons/apple-touch-icon.png" />
-    <meta name="apple-mobile-web-app-title" content="Jacob Tanner" />
-    <link rel="manifest" href="icons/site.webmanifest" />
-</head>
-
-<body>
-    <nav>
-        <a href="index.html" class="logo">Jacob Tanner</a>
-
-        <div class="nav-right">
-            <button id="theme-toggle" aria-label="Theme dropdown">
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                    class="bi bi-moon-fill" viewBox="0 0 16 16">
-                    <path
-                        d="M6 .278a.77.77 0 0 1 .08.858 7.2 7.2 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277q.792-.001 1.533-.16a.79.79 0 0 1 .81.316.73.73 0 0 1-.031.893A8.35 8.35 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.75.75 0 0 1 6 .278" />
-                </svg>
-            </button>
-            <div id="theme-dropdown" class="theme-dropdown hidden">
-                <button data-theme="system">🖥️ System Default</button>
-                <button data-theme="light">☀️ Light Mode</button>
-                <button data-theme="dark">🌙 Dark Mode</button>
+        <link rel="icon" type="image/png" href="/icons/favicon/favicon-96x96.png?v=20261118" sizes="96x96" />
+        <link rel="icon" type="image/svg+xml" href="/icons/favicon/favicon.svg?v=20261118" />
+        <link rel="shortcut icon" href="/icons/favicon/favicon.ico?v=20261118" />
+        <link rel="apple-touch-icon" sizes="180x180" href="/icons/favicon/apple-touch-icon.png?v=20261118" />
+        <meta name="apple-mobile-web-app-title" content="Jacob Tanner" />
+        <link rel="manifest" href="/icons/favicon/site.webmanifest?v=20261118" />
+    </head>
+    <body>
+        <a class="skip-link" href="#main-content">Skip to content</a><header class="site-header">
+            <nav aria-label="Primary navigation">
+                <a href="index.html" class="logo"><svg
+                        class="sprout-icon"
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="22"
+                        height="22"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        aria-hidden="true"
+                    >
+                        <path d="M7 20h10"></path>
+                        <path d="M10 20c5.5-2.5.8-6.4 3-10"></path>
+                        <path
+                            d="M9.5 9.4c1.1.8 1.8 2.2 2.4 3.6-2.1.4-3.8.4-5.3-.3-1.2-.6-2.3-1.9-3.6-4 2.8-.5 4.8-.3 6.5.7z"
+                        >
+                        </path>
+                        <path
+                            d="M14.1 6A7 7 0 0 0 13 10c2.4-.1 4.5-.7 5.8-1.9 1-1 1.7-2.4 2.2-4.6-3.1-.1-5.3.6-6.9 2.5z"
+                        >
+                        </path>
+                    </svg><span>Jacob Tanner</span></a><div class="nav-right">
+                    <button
+                        id="theme-toggle"
+                        aria-label="Choose color theme"
+                        aria-haspopup="true"
+                        aria-controls="theme-dropdown"
+                        aria-expanded="false"
+                    >
+                        <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="16"
+                            height="16"
+                            fill="currentColor"
+                            class="bi bi-moon-fill"
+                            viewBox="0 0 16 16"
+                            aria-hidden="true"
+                        >
+                            <path
+                                d="M6 .278a.77.77 0 0 1 .08.858 7.2 7.2 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277q.792-.001 1.533-.16a.79.79 0 0 1 .81.316.73.73 0 0 1-.031.893A8.35 8.35 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.75.75 0 0 1 6 .278"
+                            >
+                            </path>
+                        </svg>
+                    </button>
+                    <div id="theme-dropdown" class="theme-dropdown hidden">
+                        <button data-theme="system">🖥️ System Default</button>
+                        <button data-theme="light">☀️ Light Mode</button>
+                        <button data-theme="dark">🌙 Dark Mode</button>
+                    </div>
+                    <button
+                        id="menu-toggle"
+                        aria-label="Toggle menu"
+                        aria-controls="nav-links"
+                        aria-expanded="false"
+                        class="menu-icon"
+                    >
+                        <span class="bar top"></span><span class="bar middle"></span><span class="bar bottom"></span>
+                    </button>
+                </div>
+                <ul id="nav-links">
+                    <li><a href="portfolio.html">Portfolio</a></li>
+                    <li><a href="resume.html">Resume</a></li>
+                    <li><a href="about.html">About</a></li>
+                </ul>
+            </nav>
+        </header>
+        <main id="main-content" class="status-main">
+            <section class="status-card with-image">
+                <div class="status-image">
+                    <picture class="light-image">
+                        <source srcset="images/errors/404.webp" type="image/webp"><img
+                            src="images/errors/404.jpeg"
+                            alt="Cosmos the cat"
+                        >
+                    </picture>
+                    <picture class="dark-image">
+                        <source srcset="images/errors/404-dark.webp" type="image/webp"><img
+                            src="images/errors/404-dark.jpeg"
+                            alt="Cosmos the cat"
+                        >
+                    </picture>
+                </div>
+                <div class="status-copy">
+                    <p class="eyebrow">404 · Page not found</p>
+                    <h1>Looks like you're lost in the cosmos.</h1>
+                    <p>No planets can be found out here. Make sure you have the right coordinates.</p><a
+                        href="index.html"
+                        class="btn-home"
+                    >Back to home <span aria-hidden="true">→</span></a>
+                </div>
+            </section>
+        </main>
+        <footer class="site-footer">
+            <div class="footer-brand">
+                <div class="footer-name">
+                    <svg
+                        class="sprout-icon"
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="21"
+                        height="21"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        aria-hidden="true"
+                    >
+                        <path d="M7 20h10"></path>
+                        <path d="M10 20c5.5-2.5.8-6.4 3-10"></path>
+                        <path
+                            d="M9.5 9.4c1.1.8 1.8 2.2 2.4 3.6-2.1.4-3.8.4-5.3-.3-1.2-.6-2.3-1.9-3.6-4 2.8-.5 4.8-.3 6.5.7z"
+                        >
+                        </path>
+                        <path
+                            d="M14.1 6A7 7 0 0 0 13 10c2.4-.1 4.5-.7 5.8-1.9 1-1 1.7-2.4 2.2-4.6-3.1-.1-5.3.6-6.9 2.5z"
+                        >
+                        </path>
+                    </svg><span>Jacob Tanner</span>
+                </div>
+                <p>Build things that matter.</p>
             </div>
-
-            <button id="menu-toggle" aria-label="Toggle menu" class="menu-icon">
-                <span class="bar top"></span>
-                <span class="bar middle"></span>
-                <span class="bar bottom"></span>
-            </button>
-        </div>
-
-        <ul id="nav-links">
-            <li><a href="portfolio.html">Portfolio</a></li>
-            <li><a href="resume.html">Resume</a></li>
-            <li><a href="about.html">About</a></li>
-        </ul>
+            <div class="footer-meta">
+                <ul>
+                    <li><a href="https://github.com/jtann5" target="_blank" rel="noopener noreferrer">GitHub</a></li>
+                    <li>
+                        <a href="https://www.linkedin.com/in/jacobytanner" target="_blank" rel="noopener noreferrer"
+                        >LinkedIn</a>
+                    </li>
+                </ul>
+                <p>&copy; <span data-current-year>2026</span> Jacob Tanner</p>
+            </div>
+        </footer>
         <script src="js/nav.js"></script>
-    </nav>
-    <main>
-        <div class="container">
-            <div class="image-container">
-                <picture class="light-image">
-                    <source srcset="images/errors/404.webp" type="image/webp">
-                    <img src="images/errors/404.jpeg" alt="Cosmos cat">
-                </picture>
-                <picture class="dark-image">
-                    <source srcset="images/errors/404-dark.webp" type="image/webp">
-                    <img src="images/errors/404-dark.jpeg" alt="Cosomos cat">
-                </picture>
-            </div>
-            <div class="text-content">
-                <h1>Looks like you're lost in the cosmos</h1>
-                <p>No planets can be found out here. Make sure you have the right coordinates.</p>
-                <a href="index.html" class="btn-home">Back To Home</a>
-            </div>
-        </div>
-    </main>
-    <footer>
-        <ul>
-            <li>&copy; 2026 Jacob Tanner</li>
-            <li><a href="https://github.com/jtann5" target="_blank" rel="noopener noreferrer">GitHub</a></li>
-            <li><a href="https://www.linkedin.com/in/jacobytanner" target="_blank"
-                    rel="noopener noreferrer">LinkedIn</a></li>
-        </ul>
-    </footer>
-</body>
-
+    </body>
 </html>

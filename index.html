@@ -1,110 +1,251 @@
 <!DOCTYPE html>
 <html lang="en">
+    <head>
+        <meta name="robots" content="noarchive">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta
+            name="description"
+            content="Jacob Tanner is a software engineer with a master's degree in Computer Science from Montana State University."
+        >
+        <title>Jacob Tanner | Software Engineer</title>
 
-<head>
-    <meta name="robots" content="noarchive">
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jacob Tanner</title>
+        <script>
+            (function () {
+                const savedTheme = localStorage.getItem("theme");
+                if (savedTheme === "dark") document.documentElement.classList.add("dark-mode");
+                else if (savedTheme === "light") document.documentElement.classList.add("light-mode");
+            })();
+        </script>
 
-    <script>
-        (function () {
-            const savedTheme = localStorage.getItem('theme');
-            if (savedTheme === 'dark') document.documentElement.classList.add('dark-mode');
-            else if (savedTheme === 'light') document.documentElement.classList.add('light-mode');
-        })();
-    </script>
+        <link rel="stylesheet" href="css/global.css">
+        <link rel="stylesheet" href="css/index.css">
 
-    <link rel="stylesheet" href="css/global.css">
-    <link rel="stylesheet" href="css/index.css">
+        <link rel="icon" type="image/png" href="/icons/favicon/favicon-96x96.png?v=20261118" sizes="96x96" />
+        <link rel="icon" type="image/svg+xml" href="/icons/favicon/favicon.svg?v=20261118" />
+        <link rel="shortcut icon" href="/icons/favicon/favicon.ico?v=20261118" />
+        <link rel="apple-touch-icon" sizes="180x180" href="/icons/favicon/apple-touch-icon.png?v=20261118" />
+        <meta name="apple-mobile-web-app-title" content="Jacob Tanner" />
+        <link rel="manifest" href="/icons/favicon/site.webmanifest?v=20261118" />
+    </head>
 
-    <link rel="icon" type="image/png" href="icons/favicon-96x96.png" sizes="96x96" />
-    <link rel="icon" type="image/svg+xml" href="icons/favicon.svg" />
-    <link rel="shortcut icon" href="icons/favicon.ico" />
-    <link rel="apple-touch-icon" sizes="180x180" href="icons/apple-touch-icon.png" />
-    <meta name="apple-mobile-web-app-title" content="Jacob Tanner" />
-    <link rel="manifest" href="icons/site.webmanifest" />
-</head>
+    <body class="home-page">
+        <a class="skip-link" href="#main-content">Skip to content</a>
 
-<body>
-    <nav>
-        <a href="index.html" class="logo">Jacob Tanner</a>
+        <header class="site-header">
+            <nav aria-label="Primary navigation">
+                <a href="index.html" class="logo" aria-current="page">
+                    <svg
+                        class="sprout-icon"
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="22"
+                        height="22"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        aria-hidden="true"
+                    >
+                        <path d="M7 20h10"></path>
+                        <path d="M10 20c5.5-2.5.8-6.4 3-10"></path>
+                        <path
+                            d="M9.5 9.4c1.1.8 1.8 2.2 2.4 3.6-2.1.4-3.8.4-5.3-.3-1.2-.6-2.3-1.9-3.6-4 2.8-.5 4.8-.3 6.5.7z"
+                        >
+                        </path>
+                        <path
+                            d="M14.1 6A7 7 0 0 0 13 10c2.4-.1 4.5-.7 5.8-1.9 1-1 1.7-2.4 2.2-4.6-3.1-.1-5.3.6-6.9 2.5z"
+                        >
+                        </path>
+                    </svg>
+                    <span>Jacob Tanner</span>
+                </a>
 
-        <div class="nav-right">
-            <button id="theme-toggle" aria-label="Theme dropdown">
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                    class="bi bi-moon-fill" viewBox="0 0 16 16">
-                    <path
-                        d="M6 .278a.77.77 0 0 1 .08.858 7.2 7.2 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277q.792-.001 1.533-.16a.79.79 0 0 1 .81.316.73.73 0 0 1-.031.893A8.35 8.35 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.75.75 0 0 1 6 .278" />
-                </svg>
-            </button>
-            <div id="theme-dropdown" class="theme-dropdown hidden">
-                <button data-theme="system">🖥️ System Default</button>
-                <button data-theme="light">☀️ Light Mode</button>
-                <button data-theme="dark">🌙 Dark Mode</button>
+                <div class="nav-right">
+                    <button
+                        id="theme-toggle"
+                        aria-label="Choose color theme"
+                        aria-haspopup="true"
+                        aria-controls="theme-dropdown"
+                        aria-expanded="false"
+                    >
+                        <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="16"
+                            height="16"
+                            fill="currentColor"
+                            class="bi bi-moon-fill"
+                            viewBox="0 0 16 16"
+                            aria-hidden="true"
+                        >
+                            <path
+                                d="M6 .278a.77.77 0 0 1 .08.858 7.2 7.2 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277q.792-.001 1.533-.16a.79.79 0 0 1 .81.316.73.73 0 0 1-.031.893A8.35 8.35 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.75.75 0 0 1 6 .278"
+                            >
+                            </path>
+                        </svg>
+                    </button>
+                    <div id="theme-dropdown" class="theme-dropdown hidden">
+                        <button data-theme="system">🖥️ System Default</button>
+                        <button data-theme="light">☀️ Light Mode</button>
+                        <button data-theme="dark">🌙 Dark Mode</button>
+                    </div>
+
+                    <button
+                        id="menu-toggle"
+                        aria-label="Toggle menu"
+                        aria-controls="nav-links"
+                        aria-expanded="false"
+                        class="menu-icon"
+                    >
+                        <span class="bar top"></span>
+                        <span class="bar middle"></span>
+                        <span class="bar bottom"></span>
+                    </button>
+                </div>
+
+                <ul id="nav-links">
+                    <li><a href="portfolio.html">Portfolio</a></li>
+                    <li><a href="resume.html">Resume</a></li>
+                    <li><a href="about.html">About</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <main id="main-content">
+            <section class="hero" aria-labelledby="hero-title">
+                <p class="eyebrow">Software · Systems · Security</p>
+                <h1 id="hero-title">Build things that matter.</h1>
+                <p class="hero-intro">
+                    I'm Jacob, a computer science graduate with a master's degree from Montana State University.
+                    My interests span software development, infrastructure, and security.
+                    I enjoy understanding how things work and building solutions that are reliable and useful.
+                </p>
+                <div class="hero-actions">
+                    <a class="button button-primary" href="#featured-projects">Explore my work <span
+                            aria-hidden="true"
+                        >→</span></a>
+                    <a class="button button-secondary" href="about.html#contact">Get in touch</a>
+                </div>
+            </section>
+
+            <section class="projects-section" id="featured-projects" aria-labelledby="projects-title">
+                <div class="section-header">
+                    <h2 id="projects-title">Featured projects</h2>
+                    <a class="section-link" href="portfolio.html">View all <span aria-hidden="true">→</span></a>
+                </div>
+
+                <div class="project-grid">
+                    <article class="project-card">
+                        <a class="project-card-link" href="portfolio.html#housing-portal">
+                            <div class="project-image">
+                                <picture>
+                                    <source srcset="images/housing-portal/dashboard.webp" type="image/webp">
+                                    <img
+                                        src="images/housing-portal/dashboard.jpeg"
+                                        alt="Dashboard of the HRDC housing maintenance portal"
+                                    >
+                                </picture>
+                            </div>
+                            <div class="project-content">
+                                <div class="project-heading">
+                                    <h3>HRDC Housing Maintenance Portal</h3>
+                                    <span class="card-arrow" aria-hidden="true">↗</span>
+                                </div>
+                                <p>A web application for viewing and managing tenant maintenance requests.</p>
+                                <ul class="technology-list" aria-label="Technologies used">
+                                    <li>Django</li>
+                                    <li>PostgreSQL</li>
+                                    <li>HTMX</li>
+                                    <li>Docker</li>
+                                    <li>NGINX</li>
+                                </ul>
+                            </div>
+                        </a>
+                    </article>
+
+                    <article class="project-card">
+                        <a class="project-card-link" href="portfolio.html#microcontroller-system">
+                            <div class="project-image">
+                                <picture>
+                                    <source srcset="images/microcontroller-system/car.webp" type="image/webp">
+                                    <img src="images/microcontroller-system/car.jpeg" alt="Montana State Chem-E-Car">
+                                </picture>
+                            </div>
+                            <div class="project-content">
+                                <div class="project-heading">
+                                    <h3>Chem-E-Car Microcontroller System</h3>
+                                    <span class="card-arrow" aria-hidden="true">↗</span>
+                                </div>
+                                <p>A system for controlling and monitoring reactions on the MSU Chem-E-Car.</p>
+                                <ul class="technology-list" aria-label="Technologies used">
+                                    <li>C++</li>
+                                    <li>Arduino</li>
+                                    <li>Embedded Systems</li>
+                                    <li>Multidisciplinary Engineering</li>
+                                </ul>
+                            </div>
+                        </a>
+                    </article>
+                </div>
+            </section>
+
+            <section class="about-preview" aria-labelledby="about-title">
+                <div>
+                    <h2 id="about-title">A little about me</h2>
+                    <p>
+                        I'm always interested in learning something new, understanding how things work, and
+                        exploring ideas both inside and outside of technology.
+                    </p>
+                    <a class="section-link" href="about.html">More about me <span aria-hidden="true">→</span></a>
+                </div>
+            </section>
+        </main>
+
+        <footer class="site-footer">
+            <div class="footer-brand">
+                <div class="footer-name">
+                    <svg
+                        class="sprout-icon"
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="21"
+                        height="21"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        aria-hidden="true"
+                    >
+                        <path d="M7 20h10"></path>
+                        <path d="M10 20c5.5-2.5.8-6.4 3-10"></path>
+                        <path
+                            d="M9.5 9.4c1.1.8 1.8 2.2 2.4 3.6-2.1.4-3.8.4-5.3-.3-1.2-.6-2.3-1.9-3.6-4 2.8-.5 4.8-.3 6.5.7z"
+                        >
+                        </path>
+                        <path
+                            d="M14.1 6A7 7 0 0 0 13 10c2.4-.1 4.5-.7 5.8-1.9 1-1 1.7-2.4 2.2-4.6-3.1-.1-5.3.6-6.9 2.5z"
+                        >
+                        </path>
+                    </svg>
+                    <span>Jacob Tanner</span>
+                </div>
+                <p>Build things that matter.</p>
             </div>
 
-            <button id="menu-toggle" aria-label="Toggle menu" class="menu-icon">
-                <span class="bar top"></span>
-                <span class="bar middle"></span>
-                <span class="bar bottom"></span>
-            </button>
-        </div>
+            <div class="footer-meta">
+                <ul>
+                    <li><a href="https://github.com/jtann5" target="_blank" rel="noopener noreferrer">GitHub</a></li>
+                    <li>
+                        <a href="https://www.linkedin.com/in/jacobytanner" target="_blank" rel="noopener noreferrer"
+                        >LinkedIn</a>
+                    </li>
+                </ul>
+                <p>&copy; <span data-current-year>2026</span> Jacob Tanner</p>
+            </div>
+        </footer>
 
-        <ul id="nav-links">
-            <li><a href="portfolio.html">Portfolio</a></li>
-            <li><a href="resume.html">Resume</a></li>
-            <li><a href="about.html">About</a></li>
-        </ul>
         <script src="js/nav.js"></script>
-    </nav>
-    <main>
-        <h1>Hi, I'm Jacob Tanner</h1>
-        <p>I'm a graduate Computer Science student at Montana State University. <a href="about.html"
-                class="underline-slide">Learn more about me.</a></p>
-        <p><a href="portfolio.html" class="underline-slide">View My Work &rarr;</a></p>
-        <p><a href="resume.html" class="underline-slide">View My Experience and Education &rarr;</a></p>
-        <p>Have a project in mind or just want to chat? <a href="about.html#contact" class="underline-slide">Let's
-                connect</a>.</p>
-
-        <h2>Featured projects</h2>
-        <div class="featured-projects">
-            <div class="project-preview" onclick="window.location.href='portfolio.html#housing-portal'"
-                style="cursor: pointer;">
-                <picture>
-                    <source srcset="images/housing-portal/dashboard.webp" type="image/webp">
-                    <img src="images/housing-portal/dashboard.jpeg" alt="Dashboard of HRDC housing portal">
-                </picture>
-                <br>
-                <h3>HRDC Housing Maintenance Portal</h3>
-                <p>Web application for viewing and managing tenant maintenance requests.</p>
-                <div>
-                    <a href="portfolio.html#housing-portal" class="underline-slide">View More &rarr;</a>
-                </div>
-            </div>
-            <div class="project-preview" onclick="window.location.href='portfolio.html#microcontroller-system'"
-                style="cursor: pointer;">
-                <picture>
-                    <source srcset="images/microcontroller-system/car.webp" type="image/webp">
-                    <img src="images/microcontroller-system/car.jpeg" alt="Chem-E-Car">
-                </picture>
-                <br>
-                <h3>Chem-E-Car Microcontroller System</h3>
-                <p>System for controlling reactions on the MSU Chem-E-Car.</p>
-                <div>
-                    <a href="portfolio.html#microcontroller-system" class="underline-slide">View More &rarr;</a>
-                </div>
-            </div>
-        </div>
-    </main>
-    <footer>
-        <ul>
-            <li>&copy; 2026 Jacob Tanner</li>
-            <li><a href="https://github.com/jtann5" target="_blank" rel="noopener noreferrer">GitHub</a></li>
-            <li><a href="https://www.linkedin.com/in/jacobytanner" target="_blank"
-                    rel="noopener noreferrer">LinkedIn</a></li>
-        </ul>
-    </footer>
-</body>
-
+    </body>
 </html>

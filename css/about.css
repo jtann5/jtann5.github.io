@@ -1,76 +1,119 @@
-.about-wrapper {
-  display: flex;
-  gap: 2rem;
-  max-width: 1200px;
-  margin: auto;
-  align-items: flex-start;
-  flex-wrap: nowrap;
-  flex-direction: row;
+.about-section {
+  display: grid;
+  grid-template-columns: minmax(260px, 0.72fr) minmax(0, 1.28fr);
+  gap: clamp(48px, 8vw, 96px);
+  padding: clamp(64px, 9vw, 104px) 0;
 }
 
-/* Photo is first in HTML but we want it visually on the right on desktop */
 .about-photo {
-  flex: 1 1 40%;
-  max-width: 400px;
-  order: 2; /* push to the right on desktop */
-  display: flex;
-  justify-content: center;
-  align-items: flex-start;
-  margin: 0;
-  margin-top: 2rem;
+  align-self: start;
+  overflow: hidden;
+  border: 1px solid var(--border-subtle);
+  border-radius: 10px;
+  background: var(--card-bg);
+}
+
+.about-photo picture,
+.about-photo img {
+  display: block;
+  width: 100%;
 }
 
 .about-photo img {
-  width: 100%;
-  height: auto;
-  border-radius: 12px;
+  aspect-ratio: 3 / 4;
+  object-fit: cover;
 }
 
-.about-left {
-  flex: 1 1 60%;
-  display: flex;
-  flex-direction: column;
-  gap: 0;
-  margin: 0;
-  padding: 0;
-  order: 1; /* left column */
+.about-copy h2,
+.contact-intro h2 {
+  margin: 0 0 24px;
+  color: var(--text-strong);
+  font-size: clamp(32px, 4vw, 44px);
+  line-height: 1.15;
+  letter-spacing: -0.035em;
 }
 
-.about-left > * {
+.about-copy p {
+  margin: 0 0 20px;
+  color: var(--text-primary);
+  font-size: 17px;
+  line-height: 1.75;
+}
+
+.contact-section {
+  display: grid;
+  grid-template-columns: minmax(0, 0.82fr) minmax(320px, 1.18fr);
+  gap: clamp(48px, 8vw, 96px);
+  padding: clamp(46px, 7vw, 72px);
+  border: 1px solid var(--border-subtle);
+  border-radius: 10px;
+  background: var(--card-bg);
+}
+
+.contact-intro > p:last-child {
+  max-width: 420px;
   margin: 0;
-  padding: 0;
+  color: var(--text-tertiary);
 }
 
 .contact-form {
-  margin-top: 0;
+  display: grid;
+  gap: 9px;
 }
 
-/* Mobile: photo on top (order 1), then about-left (order 2) */
-@media (max-width: 768px) {
-  .about-wrapper {
-    flex-direction: column;
+.contact-form label {
+  margin-top: 7px;
+  color: var(--text-secondary);
+  font-size: 14px;
+  font-weight: 650;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 12px 13px;
+  border: 1px solid var(--border-subtle);
+  border-radius: 7px;
+  color: var(--text-primary);
+  background: var(--page-bg);
+}
+
+.contact-form textarea {
+  min-height: 160px;
+  resize: vertical;
+}
+
+.contact-form button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  min-height: 50px;
+  margin-top: 14px;
+  padding: 0 22px;
+  border: 0;
+  border-radius: 7px;
+  color: #fff;
+  background: #2467a6;
+  font-weight: 650;
+  cursor: pointer;
+}
+
+.contact-form button:hover {
+  background: #1b527f;
+}
+
+@media (max-width: 760px) {
+  .about-section,
+  .contact-section {
+    grid-template-columns: 1fr;
   }
 
   .about-photo {
-    order: 1;
-    width: 100%;
-    max-width: none;
-    margin-bottom: 1.5rem;
-    text-align: center;
-    display: block;
+    max-width: 430px;
   }
 
-  .about-photo img {
-    display: inline-block;
-    max-height: 400px;
-    width: auto;
-    max-width: 100%;
-    object-fit: cover;
-    border-radius: 12px;
-  }
-
-  .about-left {
-    order: 2;
-    flex: 1 1 100%;
+  .contact-section {
+    padding: 30px 24px;
   }
 }

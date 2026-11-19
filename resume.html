@@ -1,120 +1,245 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta name="robots" content="noindex, nofollow, noarchive">
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Resume | Jacob Tanner</title>
-
-    <script>
-        (function () {
-            const savedTheme = localStorage.getItem('theme');
-            if (savedTheme === 'dark') document.documentElement.classList.add('dark-mode');
-            else if (savedTheme === 'light') document.documentElement.classList.add('light-mode');
-        })();
-    </script>
-
-    <link rel="stylesheet" href="css/global.css">
-    <link rel="stylesheet" href="css/resume.css">
-
-    <link rel="icon" type="image/png" href="icons/favicon-96x96.png" sizes="96x96" />
-    <link rel="icon" type="image/svg+xml" href="icons/favicon.svg" />
-    <link rel="shortcut icon" href="icons/favicon.ico" />
-    <link rel="apple-touch-icon" sizes="180x180" href="icons/apple-touch-icon.png" />
-    <meta name="apple-mobile-web-app-title" content="Jacob Tanner" />
-    <link rel="manifest" href="icons/site.webmanifest" />
-</head>
-
-<body>
-    <nav>
-        <a href="index.html" class="logo">Jacob Tanner</a>
-
-        <div class="nav-right">
-            <button id="theme-toggle" aria-label="Theme dropdown">
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                    class="bi bi-moon-fill" viewBox="0 0 16 16">
-                    <path
-                        d="M6 .278a.77.77 0 0 1 .08.858 7.2 7.2 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277q.792-.001 1.533-.16a.79.79 0 0 1 .81.316.73.73 0 0 1-.031.893A8.35 8.35 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.75.75 0 0 1 6 .278" />
-                </svg>
-            </button>
-            <div id="theme-dropdown" class="theme-dropdown hidden">
-                <button data-theme="system">🖥️ System Default</button>
-                <button data-theme="light">☀️ Light Mode</button>
-                <button data-theme="dark">🌙 Dark Mode</button>
+    <head>
+        <meta name="robots" content="noindex, nofollow, noarchive">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Education, experience, and technical skills for Jacob Tanner.">
+        <title>Resume | Jacob Tanner</title>
+        <script>
+            (function () {
+                const savedTheme = localStorage.getItem("theme");
+                if (savedTheme === "dark") document.documentElement.classList.add("dark-mode");
+                else if (savedTheme === "light") document.documentElement.classList.add("light-mode");
+            })();
+        </script>
+        <link rel="stylesheet" href="css/global.css">
+        <link rel="stylesheet" href="css/resume.css">
+        
+        <link rel="icon" type="image/png" href="/icons/favicon/favicon-96x96.png?v=20261118" sizes="96x96" />
+        <link rel="icon" type="image/svg+xml" href="/icons/favicon/favicon.svg?v=20261118" />
+        <link rel="shortcut icon" href="/icons/favicon/favicon.ico?v=20261118" />
+        <link rel="apple-touch-icon" sizes="180x180" href="/icons/favicon/apple-touch-icon.png?v=20261118" />
+        <meta name="apple-mobile-web-app-title" content="Jacob Tanner" />
+        <link rel="manifest" href="/icons/favicon/site.webmanifest?v=20261118" />
+    </head>
+    <body>
+        <a class="skip-link" href="#main-content">Skip to content</a>
+        <header class="site-header">
+            <nav aria-label="Primary navigation">
+                <a href="index.html" class="logo"><svg
+                        class="sprout-icon"
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="22"
+                        height="22"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        aria-hidden="true"
+                    >
+                        <path d="M7 20h10"></path>
+                        <path d="M10 20c5.5-2.5.8-6.4 3-10"></path>
+                        <path
+                            d="M9.5 9.4c1.1.8 1.8 2.2 2.4 3.6-2.1.4-3.8.4-5.3-.3-1.2-.6-2.3-1.9-3.6-4 2.8-.5 4.8-.3 6.5.7z"
+                        >
+                        </path>
+                        <path
+                            d="M14.1 6A7 7 0 0 0 13 10c2.4-.1 4.5-.7 5.8-1.9 1-1 1.7-2.4 2.2-4.6-3.1-.1-5.3.6-6.9 2.5z"
+                        >
+                        </path>
+                    </svg><span>Jacob Tanner</span></a>
+                <div class="nav-right">
+                    <button
+                        id="theme-toggle"
+                        aria-label="Choose color theme"
+                        aria-haspopup="true"
+                        aria-controls="theme-dropdown"
+                        aria-expanded="false"
+                    >
+                        <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="16"
+                            height="16"
+                            fill="currentColor"
+                            class="bi bi-moon-fill"
+                            viewBox="0 0 16 16"
+                            aria-hidden="true"
+                        >
+                            <path
+                                d="M6 .278a.77.77 0 0 1 .08.858 7.2 7.2 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277q.792-.001 1.533-.16a.79.79 0 0 1 .81.316.73.73 0 0 1-.031.893A8.35 8.35 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.75.75 0 0 1 6 .278"
+                            >
+                            </path>
+                        </svg>
+                    </button>
+                    <div id="theme-dropdown" class="theme-dropdown hidden">
+                        <button data-theme="system">🖥️ System Default</button>
+                        <button data-theme="light">☀️ Light Mode</button>
+                        <button data-theme="dark">🌙 Dark Mode</button>
+                    </div>
+                    <button
+                        id="menu-toggle"
+                        aria-label="Toggle menu"
+                        aria-controls="nav-links"
+                        aria-expanded="false"
+                        class="menu-icon"
+                    >
+                        <span class="bar top"></span><span class="bar middle"></span><span class="bar bottom"></span>
+                    </button>
+                </div>
+                <ul id="nav-links">
+                    <li><a href="portfolio.html">Portfolio</a></li>
+                    <li><a class="active" href="resume.html" aria-current="page">Resume</a></li>
+                    <li><a href="about.html">About</a></li>
+                </ul>
+            </nav>
+        </header>
+        <main id="main-content" class="page-shell resume-container">
+            <header class="page-header">
+                <p class="eyebrow">Resume</p>
+                <h1>Experience and education.</h1>
+                <p>A summary of my academic background, professional experience, and technical skills.</p>
+            </header>
+            <section class="resume-section" aria-labelledby="education-title">
+                <h2 id="education-title">Education</h2>
+                <div class="resume-items">
+                    <article class="resume-item">
+                        <div class="item-heading">
+                            <div>
+                                <h3>Master of Science in Computer Science</h3>
+                                <p class="organization">
+                                    Montana State University <span>· Bozeman, MT · GPA: 3.94</span>
+                                </p>
+                            </div>
+                            <p class="dates">Aug 2024 – May 2026</p>
+                        </div>
+                    </article>
+                    <article class="resume-item">
+                        <div class="item-heading">
+                            <div>
+                                <h3>Bachelor of Science in Computer Science</h3>
+                                <p class="organization">
+                                    Montana State University <span>· Bozeman, MT · GPA: 3.87</span>
+                                </p>
+                            </div>
+                            <p class="dates">Aug 2021 – May 2024</p>
+                        </div>
+                    </article>
+                </div>
+            </section>
+            <section class="resume-section" aria-labelledby="experience-title">
+                <h2 id="experience-title">Work experience</h2>
+                <div class="resume-items">
+                    <article class="resume-item">
+                        <div class="item-heading">
+                            <div>
+                                <h3>Graduate Teaching Assistant</h3>
+                                <p class="organization">Montana State University <span>· Bozeman, MT</span></p>
+                            </div>
+                            <p class="dates">Aug 2025 – May 2026</p>
+                        </div>
+                        <ul>
+                            <li>
+                                Supported Concepts of Programming Languages and Computer Security courses by grading
+                                assignments, providing feedback, proctoring exams, and assisting students with technical
+                                concepts.
+                            </li>
+                            <li>
+                                Held weekly office hours for Computer Science students, tutoring coursework,
+                                troubleshooting programming issues, and explaining technical material to students with
+                                varying experience levels.
+                            </li>
+                        </ul>
+                    </article>
+                    <article class="resume-item">
+                        <div class="item-heading">
+                            <div>
+                                <h3>Desktop Support Technician</h3>
+                                <p class="organization">Montana State University <span>· Bozeman, MT</span></p>
+                            </div>
+                            <p class="dates">Nov 2022 – Dec 2024</p>
+                        </div>
+                        <ul>
+                            <li>
+                                Imaged computers with MDT, configured devices in Active Directory, and assisted users
+                                with setup.
+                            </li>
+                            <li>
+                                Diagnosed software, hardware, and system issues while documenting resolutions in a
+                                ticketing system.
+                            </li>
+                            <li>
+                                Provided Windows and macOS technical support for faculty, staff, and departments across campus.
+                            </li>
+                        </ul>
+                    </article>
+                </div>
+            </section>
+            <section class="resume-section skills-section" aria-labelledby="skills-title">
+                <h2 id="skills-title">Skills</h2>
+                <div class="skills-grid">
+                    <div>
+                        <h3>Languages</h3>
+                        <p>Python, Java, C, C++, C#, JavaScript, SQL, HTML, CSS, x86 Assembly</p>
+                    </div>
+                    <div>
+                        <h3>Systems &amp; Infrastructure</h3>
+                        <p>Linux, Windows, macOS, Bash, Docker, AWS, Active Directory, Git, NGINX</p>
+                    </div>
+                    <div>
+                        <h3>Technologies &amp; Tools</h3>
+                        <p>Django, Flask, HTMX, PyTorch, PostgreSQL, RStudio, Jupyter</p>
+                    </div>
+                    <div>
+                        <h3>Security</h3>
+                        <p>GDB, Ghidra, Binary Ninja, Wireshark, pwntools</p>
+                    </div>
+                </div>
+            </section>
+        </main>
+        <footer class="site-footer">
+            <div class="footer-brand">
+                <div class="footer-name">
+                    <svg
+                        class="sprout-icon"
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="21"
+                        height="21"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        aria-hidden="true"
+                    >
+                        <path d="M7 20h10"></path>
+                        <path d="M10 20c5.5-2.5.8-6.4 3-10"></path>
+                        <path
+                            d="M9.5 9.4c1.1.8 1.8 2.2 2.4 3.6-2.1.4-3.8.4-5.3-.3-1.2-.6-2.3-1.9-3.6-4 2.8-.5 4.8-.3 6.5.7z"
+                        >
+                        </path>
+                        <path
+                            d="M14.1 6A7 7 0 0 0 13 10c2.4-.1 4.5-.7 5.8-1.9 1-1 1.7-2.4 2.2-4.6-3.1-.1-5.3.6-6.9 2.5z"
+                        >
+                        </path>
+                    </svg><span>Jacob Tanner</span>
+                </div>
+                <p>Build things that matter.</p>
             </div>
-
-            <button id="menu-toggle" aria-label="Toggle menu" class="menu-icon">
-                <span class="bar top"></span>
-                <span class="bar middle"></span>
-                <span class="bar bottom"></span>
-            </button>
-        </div>
-
-        <ul id="nav-links">
-            <li><a href="portfolio.html">Portfolio</a></li>
-            <li><a class="active" href="resume.html">Resume</a></li>
-            <li><a href="about.html">About</a></li>
-        </ul>
+            <div class="footer-meta">
+                <ul>
+                    <li><a href="https://github.com/jtann5" target="_blank" rel="noopener noreferrer">GitHub</a></li>
+                    <li>
+                        <a href="https://www.linkedin.com/in/jacobytanner" target="_blank" rel="noopener noreferrer"
+                        >LinkedIn</a>
+                    </li>
+                </ul>
+                <p>&copy; <span data-current-year>2026</span> Jacob Tanner</p>
+            </div>
+        </footer>
         <script src="js/nav.js"></script>
-    </nav>
-    <main class="resume-container">
-        <h1>My Resume</h1>
-
-        <div class="education">
-            <h2>Education</h2>
-            <div class="education-item">
-                <h3 class="degree">Master of Science in Computer Science</h3>
-                <p class="dates">Aug 2024 - May 2026</p>
-                <h4 class="institution">Montana State University <span class="location">| Bozeman, MT</span></h4>
-            </div>
-            <div class="education-item">
-                <h3 class="degree">Bachelor of Science in Computer Science</h3>
-                <p class="dates">Aug 2021 - May 2024</p>
-                <h4 class="institution">Montana State University <span class="location">| Bozeman, MT</span></h4>
-            </div>
-        </div>
-
-        <div class="experience">
-            <h2>Work Experience</h2>
-            <div class="experience-item">
-                <h3 class="job-title">Graduate Teaching Assistant</h3>
-                <p class="dates">Aug 2025 - May 2026</p>
-                <h4 class="company">Montana State University <span class="location">| Bozeman, MT</span></h4>
-                <ul class="responsibilities">
-                    <li>Supported Concepts of Programming Languages and Computer Security courses by grading assignments, providing feedback, proctoring exams, and assisting students with technical concepts</li>
-                    <li>Held weekly office hours for Computer Science students, tutoring coursework, troubleshooting programming issues, and explaining technical material to students with varying experience levels</li> 
-                </ul>
-            </div>
-            <div class="experience-item">
-                <h3 class="job-title">Desktop Support Technician</h3>
-                <p class="dates">Nov 2022 - Dec 2024</p>
-                <h4 class="company">Montana State University <span class="location">| Bozeman, MT</span></h4>
-                <ul class="responsibilities">
-                    <li>Imaged computers with MDT, configured devices in Active Directory, and assisted users with setup</li>
-                    <li>Diagnosed software, hardware, and system issues while documenting resolutions in a ticketing system</li>
-                    <li>Supported Windows and macOS computers for faculty, staff, and departments across campus</li>
-                </ul>
-            </div>
-        </div>
-
-        <div class="skills">
-            <h2>Skills</h2>
-            <ul class="skills-set">
-                <li><strong>Languages:</strong> Python, Java, C/C++, C#, HTML, CSS, JavaScript, PHP, SQL, Haskell, x86 Assembly</li>
-                <li><strong>Technologies & Tools:</strong> Git, Docker, Django, Flask, NGINX, Android Studio, AWS</li>
-                <li>Full Stack Web Development, Software Engineering, Cybersecurity, Systems Administration</li>
-            </ul>
-        </div>
-    </main>
-    <footer>
-        <ul>
-            <li>&copy; 2026 Jacob Tanner</li>
-            <li><a href="https://github.com/jtann5" target="_blank" rel="noopener noreferrer">GitHub</a></li>
-            <li><a href="https://www.linkedin.com/in/jacobytanner" target="_blank"
-                    rel="noopener noreferrer">LinkedIn</a></li>
-        </ul>
-    </footer>
-</body>
-
+    </body>
 </html>

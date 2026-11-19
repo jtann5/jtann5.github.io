@@ -1,256 +1,602 @@
 <!DOCTYPE html>
 <html lang="en">
+    <head>
+        <meta name="robots" content="noindex, nofollow, noarchive">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Software engineering projects by Jacob Tanner.">
+        <title>Portfolio | Jacob Tanner</title>
+        <script>
+            (function () {
+                const savedTheme = localStorage.getItem("theme");
+                if (savedTheme === "dark") document.documentElement.classList.add("dark-mode");
+                else if (savedTheme === "light") document.documentElement.classList.add("light-mode");
+            })();
+        </script>
+        <link rel="stylesheet" href="css/global.css">
+        <link rel="stylesheet" href="css/gallery.css">
 
-<head>
-    <meta name="robots" content="noindex, nofollow, noarchive">
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio | Jacob Tanner</title>
+        <link rel="icon" type="image/png" href="/icons/favicon/favicon-96x96.png?v=20261118" sizes="96x96" />
+        <link rel="icon" type="image/svg+xml" href="/icons/favicon/favicon.svg?v=20261118" />
+        <link rel="shortcut icon" href="/icons/favicon/favicon.ico?v=20261118" />
+        <link rel="apple-touch-icon" sizes="180x180" href="/icons/favicon/apple-touch-icon.png?v=20261118" />
+        <meta name="apple-mobile-web-app-title" content="Jacob Tanner" />
+        <link rel="manifest" href="/icons/favicon/site.webmanifest?v=20261118" />
+    </head>
+    <body>
+        <a class="skip-link" href="#main-content">Skip to content</a>
+        <header class="site-header">
+            <nav aria-label="Primary navigation">
+                <a href="index.html" class="logo"><svg
+                        class="sprout-icon"
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="22"
+                        height="22"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        aria-hidden="true"
+                    >
+                        <path d="M7 20h10"></path>
+                        <path d="M10 20c5.5-2.5.8-6.4 3-10"></path>
+                        <path
+                            d="M9.5 9.4c1.1.8 1.8 2.2 2.4 3.6-2.1.4-3.8.4-5.3-.3-1.2-.6-2.3-1.9-3.6-4 2.8-.5 4.8-.3 6.5.7z"
+                        >
+                        </path>
+                        <path
+                            d="M14.1 6A7 7 0 0 0 13 10c2.4-.1 4.5-.7 5.8-1.9 1-1 1.7-2.4 2.2-4.6-3.1-.1-5.3.6-6.9 2.5z"
+                        >
+                        </path>
+                    </svg><span>Jacob Tanner</span></a>
+                <div class="nav-right">
+                    <button
+                        id="theme-toggle"
+                        aria-label="Choose color theme"
+                        aria-haspopup="true"
+                        aria-controls="theme-dropdown"
+                        aria-expanded="false"
+                    >
+                        <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="16"
+                            height="16"
+                            fill="currentColor"
+                            class="bi bi-moon-fill"
+                            viewBox="0 0 16 16"
+                            aria-hidden="true"
+                        >
+                            <path
+                                d="M6 .278a.77.77 0 0 1 .08.858 7.2 7.2 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277q.792-.001 1.533-.16a.79.79 0 0 1 .81.316.73.73 0 0 1-.031.893A8.35 8.35 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.75.75 0 0 1 6 .278"
+                            >
+                            </path>
+                        </svg>
+                    </button>
+                    <div id="theme-dropdown" class="theme-dropdown hidden">
+                        <button data-theme="system">🖥️ System Default</button>
+                        <button data-theme="light">☀️ Light Mode</button>
+                        <button data-theme="dark">🌙 Dark Mode</button>
+                    </div>
+                    <button
+                        id="menu-toggle"
+                        aria-label="Toggle menu"
+                        aria-controls="nav-links"
+                        aria-expanded="false"
+                        class="menu-icon"
+                    >
+                        <span class="bar top"></span><span class="bar middle"></span><span class="bar bottom"></span>
+                    </button>
+                </div>
+                <ul id="nav-links">
+                    <li><a class="active" href="portfolio.html" aria-current="page">Portfolio</a></li>
+                    <li><a href="resume.html">Resume</a></li>
+                    <li><a href="about.html">About</a></li>
+                </ul>
+            </nav>
+        </header>
+        <main id="main-content" class="page-shell portfolio-page">
+            <header class="page-header">
+                <p class="eyebrow">Portfolio</p>
+                <h1>Projects and research.</h1>
+                <p>A selection of software, systems, and research projects from my academic and technical work.</p>
+            </header>
 
-    <script>
-        (function () {
-            const savedTheme = localStorage.getItem('theme');
-            if (savedTheme === 'dark') document.documentElement.classList.add('dark-mode');
-            else if (savedTheme === 'light') document.documentElement.classList.add('light-mode');
-        })();
-    </script>
+            <section class="project-detail" aria-labelledby="midi-generation">
+                <header class="project-header">
+                    <div>
+                        <p class="project-date">Spring 2026</p>
+                        <h2 id="midi-generation">MIDI Generation with Transformers</h2>
+                    </div>
+                    <div class="project-actions">
+                        <a
+                            class="text-link"
+                            href="https://drive.google.com/drive/folders/1_RK2marvFUaFNgWrIp76ZYhSFPqg8ncW"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >View samples <span aria-hidden="true">↗</span></a>
+                        <a
+                            class="text-link"
+                            href="https://github.com/jtann5/midi-generator"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >View on GitHub <span aria-hidden="true">↗</span></a>
+                    </div>
+                </header>
+                <ul class="technology-list" aria-label="Technologies and methods used">
+                    <li>Python</li>
+                    <li>PyTorch</li>
+                    <li>Transformers</li>
+                    <li>Jupyter</li>
+                </ul>
+                <ul class="project-points">
+                    <li>
+                        Developed a PyTorch-based transformer model to generate MIDI files from tokenized music
+                        sequences.
+                    </li>
+                    <li>
+                        Built training and generation scripts while experimenting with tokenization profiles, sequence
+                        lengths, model sizes, and sampling parameters.
+                    </li>
+                    <li>
+                        Trained and compared models for piano and multi-instrument MIDI generation using
+                        MAESTRO/YM2413-MDB datasets with REMI/REMI+ tokenization.
+                    </li>
+                </ul>
+                <div class="audio-samples" id="midi-audio" aria-label="Generated MIDI audio samples">
+                    <article class="audio-player" data-audio-src="audio/midi/piano-sample.mp3">
+                        <button class="audio-play-button" type="button" aria-label="Play piano model sample">
+                            <svg class="icon-play" viewBox="0 0 24 24" aria-hidden="true">
+                                <path d="m8 5 11 7-11 7Z"></path>
+                            </svg>
+                            <svg class="icon-pause" viewBox="0 0 24 24" aria-hidden="true">
+                                <path d="M9 5v14M15 5v14"></path>
+                            </svg>
+                        </button>
+                        <div class="audio-player-body">
+                            <div class="audio-meta">
+                                <div>
+                                    <h3>Piano model sample</h3>
+                                    <p>REMI tokenization</p>
+                                </div><span class="audio-time">0:00 / --:--</span>
+                            </div><input
+                                class="audio-progress"
+                                type="range"
+                                min="0"
+                                max="1000"
+                                value="0"
+                                aria-label="Piano sample playback position"
+                            ><p class="audio-status">Local audio file not added yet</p>
+                        </div>
+                    </article>
+                    <article class="audio-player" data-audio-src="audio/midi/multi-instrument-sample.mp3">
+                        <button class="audio-play-button" type="button" aria-label="Play multi-instrument model sample">
+                            <svg class="icon-play" viewBox="0 0 24 24" aria-hidden="true">
+                                <path d="m8 5 11 7-11 7Z"></path>
+                            </svg>
+                            <svg class="icon-pause" viewBox="0 0 24 24" aria-hidden="true">
+                                <path d="M9 5v14M15 5v14"></path>
+                            </svg>
+                        </button>
+                        <div class="audio-player-body">
+                            <div class="audio-meta">
+                                <div>
+                                    <h3>Multi-instrument model sample</h3>
+                                    <p>REMI+ tokenization</p>
+                                </div><span class="audio-time">0:00 / --:--</span>
+                            </div><input
+                                class="audio-progress"
+                                type="range"
+                                min="0"
+                                max="1000"
+                                value="0"
+                                aria-label="Multi-instrument sample playback position"
+                            ><p class="audio-status">Local audio file not added yet</p>
+                        </div>
+                    </article>
+                </div>
+            </section>
 
-    <link rel="stylesheet" href="css/global.css">
-    <link rel="stylesheet" href="css/gallery.css">
+            <section class="project-detail" aria-labelledby="coding-competency">
+                <header class="project-header">
+                    <div>
+                        <p class="project-date">Fall 2024</p>
+                        <h2 id="coding-competency">Evaluating Generative AI Coding Competency in Python</h2>
+                    </div><a
+                        class="text-link"
+                        href="https://drive.google.com/file/d/1lroELm8iNLUK3gA_G6cV9d2mp7iAx_ji/view"
+                        target="_blank"
+                        rel="nofollow noopener noreferrer"
+                    >Read the report <span aria-hidden="true">↗</span></a>
+                </header>
+                <ul class="technology-list" aria-label="Technologies and methods used">
+                    <li>Python</li>
+                    <li>RStudio</li>
+                    <li>Generative AI</li>
+                    <li>Code Evaluation</li>
+                    <li>Academic Research</li>
+                </ul>
+                <ul class="project-points">
+                    <li>
+                        Evaluated five generative AI models on Python coding prompts across varying difficulty levels.
+                    </li>
+                    <li>
+                        Applied established code-quality, correctness, and complexity metrics to assess AI-generated solutions.
+                    </li>
+                    <li>
+                        Conducted statistical analysis and performance evaluation using R and RStudio.
+                    </li>
+                    <li>
+                        Produced a formal research report covering experimental design, evaluation results, and findings.
+                    </li>
+                </ul>
+            </section>
 
-    <script src="js/gallery.js"></script>
+            <section class="project-detail" aria-labelledby="housing-portal">
+                <header class="project-header">
+                    <div>
+                        <p class="project-date">Spring 2024</p>
+                        <h2 id="housing-portal">HRDC Housing Maintenance Portal</h2>
+                    </div><a
+                        class="text-link"
+                        href="https://github.com/jtann5/HRDC_Housing_Portal"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >View on GitHub <span aria-hidden="true">↗</span></a>
+                </header>
+                <ul class="technology-list" aria-label="Technologies and methods used">
+                    <li>Django</li>
+                    <li>PostgreSQL</li>
+                    <li>HTMX</li>
+                    <li>Docker</li>
+                    <li>NGINX</li>
+                </ul>
+                <ul class="project-points">
+                    <li>
+                        Developed a Django-based web application to manage tenant maintenance requests for HRDC.
+                    </li>
+                    <li>
+                        Modeled PostgreSQL database relationships for maintenance requests, accounts, buildings, and notes.
+                    </li>
+                    <li>
+                        Built interactive frontend views and forms with HTML, CSS, Bootstrap, HTMX, and JavaScript.
+                    </li>
+                    <li>
+                        Deployed with Dockerized PostgreSQL, Gunicorn workers, NGINX routing, and Cloudflare proxy.
+                    </li>
+                    <li>
+                        Participated in weekly Scrum meetings, gathered requirements, and incorporated stakeholder feedback.
+                    </li>
+                </ul>
+                <div class="gallery-group">
+                    <h3>Desktop interface</h3>
+                    <div class="gallery-wrapper" id="gallery1">
+                        <button
+                            class="arrow left"
+                            type="button"
+                            onclick='scrollGallery(-1, "gallery1")'
+                            aria-label="Previous desktop screenshot"
+                        >
+                            ‹
+                        </button>
+                        <div class="gallery" id="gallery1-images">
+                            <picture>
+                                <source srcset="images/housing-portal/dashboard.webp" type="image/webp"><img
+                                    src="images/housing-portal/dashboard.jpeg"
+                                    alt="Dashboard screen"
+                                >
+                            </picture>
+                            <picture>
+                                <source srcset="images/housing-portal/all-requests.webp" type="image/webp"><img
+                                    src="images/housing-portal/all-requests.jpeg"
+                                    alt="All requests page"
+                                >
+                            </picture>
+                            <picture>
+                                <source srcset="images/housing-portal/login.webp" type="image/webp"><img
+                                    src="images/housing-portal/login.jpeg"
+                                    alt="Login form"
+                                >
+                            </picture>
+                            <picture>
+                                <source
+                                    srcset="images/housing-portal/maintenance-request-form.webp"
+                                    type="image/webp"
+                                ><img
+                                    src="images/housing-portal/maintenance-request-form.jpeg"
+                                    alt="Maintenance request form"
+                                >
+                            </picture>
+                            <picture>
+                                <source srcset="images/housing-portal/request-information.webp" type="image/webp"><img
+                                    src="images/housing-portal/request-information.jpeg"
+                                    alt="Maintenance request information"
+                                >
+                            </picture>
+                        </div>
+                        <button
+                            class="arrow right"
+                            type="button"
+                            onclick='scrollGallery(1, "gallery1")'
+                            aria-label="Next desktop screenshot"
+                        >
+                            ›
+                        </button>
+                    </div>
+                    <div class="dots" id="gallery1-dots" aria-label="Desktop screenshot navigation"></div>
+                </div>
+                <div class="gallery-group gallery-mobile">
+                    <h3>Mobile interface</h3>
+                    <div class="gallery-wrapper" id="gallery1m">
+                        <button
+                            class="arrow left"
+                            type="button"
+                            onclick='scrollGallery(-1, "gallery1m")'
+                            aria-label="Previous mobile screenshot"
+                        >
+                            ‹
+                        </button>
+                        <div class="gallery" id="gallery1m-images">
+                            <picture>
+                                <source srcset="images/housing-portal/dashboard-mobile.webp" type="image/webp"><img
+                                    src="images/housing-portal/dashboard-mobile.jpeg"
+                                    alt="Mobile dashboard"
+                                >
+                            </picture>
+                            <picture>
+                                <source srcset="images/housing-portal/all-requests-mobile.webp" type="image/webp"><img
+                                    src="images/housing-portal/all-requests-mobile.jpeg"
+                                    alt="Mobile all requests page"
+                                >
+                            </picture>
+                            <picture>
+                                <source srcset="images/housing-portal/login-mobile.webp" type="image/webp"><img
+                                    src="images/housing-portal/login-mobile.jpeg"
+                                    alt="Mobile login form"
+                                >
+                            </picture>
+                            <picture>
+                                <source
+                                    srcset="images/housing-portal/maintenance-request-form-mobile.webp"
+                                    type="image/webp"
+                                ><img
+                                    src="images/housing-portal/maintenance-request-form-mobile.jpeg"
+                                    alt="Mobile maintenance request form"
+                                >
+                            </picture>
+                            <picture>
+                                <source
+                                    srcset="images/housing-portal/request-information-mobile.webp"
+                                    type="image/webp"
+                                ><img
+                                    src="images/housing-portal/request-information-mobile.jpeg"
+                                    alt="Mobile request information"
+                                >
+                            </picture>
+                            <picture>
+                                <source srcset="images/housing-portal/navbar-mobile.webp" type="image/webp"><img
+                                    src="images/housing-portal/navbar-mobile.jpeg"
+                                    alt="Mobile navigation menu"
+                                >
+                            </picture>
+                        </div>
+                        <button
+                            class="arrow right"
+                            type="button"
+                            onclick='scrollGallery(1, "gallery1m")'
+                            aria-label="Next mobile screenshot"
+                        >
+                            ›
+                        </button>
+                    </div>
+                    <div class="dots" id="gallery1m-dots" aria-label="Mobile screenshot navigation"></div>
+                </div>
+            </section>
 
-    <link rel="icon" type="image/png" href="icons/favicon-96x96.png" sizes="96x96" />
-    <link rel="icon" type="image/svg+xml" href="icons/favicon.svg" />
-    <link rel="shortcut icon" href="icons/favicon.ico" />
-    <link rel="apple-touch-icon" sizes="180x180" href="icons/apple-touch-icon.png" />
-    <meta name="apple-mobile-web-app-title" content="Jacob Tanner" />
-    <link rel="manifest" href="icons/site.webmanifest" />
-</head>
+            <section class="project-detail" aria-labelledby="robotics">
+                <header class="project-header">
+                    <div>
+                        <p class="project-date">Spring 2024</p>
+                        <h2 id="robotics">Embedded Systems Robotics</h2>
+                    </div><a
+                        class="text-link"
+                        href="https://github.com/jtann5/ROB"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >View on GitHub <span aria-hidden="true">↗</span></a>
+                </header>
+                <ul class="technology-list" aria-label="Technologies and methods used">
+                    <li>Python</li>
+                    <li>Flask</li>
+                    <li>JavaScript</li>
+                    <li>Multithreading</li>
+                    <li>Raspberry Pi</li>
+                </ul>
+                <ul class="project-points">
+                    <li>
+                        Built a Flask and JavaScript web interface to control robot movements, speech, and interaction features.
+                    </li>
+                    <li>
+                        Used multithreading to coordinate concurrent robot movements, speech, and behaviors.
+                    </li>
+                    <li>
+                        Integrated speech recognition, text-to-speech, UWB localization, ultrasonic sensing, and OpenAI
+                        Assistants API functionality for conversation and navigation.
+                    </li>
+                </ul>
+                <div class="gallery-group">
+                    <div class="gallery-wrapper" id="gallery2">
+                        <button
+                            class="arrow left"
+                            type="button"
+                            onclick='scrollGallery(-1, "gallery2")'
+                            aria-label="Previous robotics photo"
+                        >
+                            ‹
+                        </button>
+                        <div class="gallery" id="gallery2-images">
+                            <picture>
+                                <source srcset="images/robotics/robot-with-face.webp" type="image/webp"><img
+                                    src="images/robotics/robot-with-face.jpeg"
+                                    alt="Robot with an expressive screen"
+                                >
+                            </picture>
+                            <picture>
+                                <source srcset="images/robotics/robot-controller.webp" type="image/webp"><img
+                                    src="images/robotics/robot-controller.jpeg"
+                                    alt="Robot web controller"
+                                >
+                            </picture>
+                            <picture>
+                                <source srcset="images/robotics/robot-off.webp" type="image/webp"><img
+                                    src="images/robotics/robot-off.jpeg"
+                                    alt="Robot hardware"
+                                >
+                            </picture>
+                        </div>
+                        <button
+                            class="arrow right"
+                            type="button"
+                            onclick='scrollGallery(1, "gallery2")'
+                            aria-label="Next robotics photo"
+                        >
+                            ›
+                        </button>
+                    </div>
+                    <div class="dots" id="gallery2-dots" aria-label="Robotics photo navigation"></div>
+                </div>
+            </section>
 
-<body>
-    <nav>
-        <a href="index.html" class="logo">Jacob Tanner</a>
-
-        <div class="nav-right">
-            <button id="theme-toggle" aria-label="Theme dropdown">
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                    class="bi bi-moon-fill" viewBox="0 0 16 16">
-                    <path
-                        d="M6 .278a.77.77 0 0 1 .08.858 7.2 7.2 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277q.792-.001 1.533-.16a.79.79 0 0 1 .81.316.73.73 0 0 1-.031.893A8.35 8.35 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.75.75 0 0 1 6 .278" />
-                </svg>
-            </button>
-            <div id="theme-dropdown" class="theme-dropdown hidden">
-                <button data-theme="system">🖥️ System Default</button>
-                <button data-theme="light">☀️ Light Mode</button>
-                <button data-theme="dark">🌙 Dark Mode</button>
+            <section class="project-detail" aria-labelledby="microcontroller-system">
+                <header class="project-header">
+                    <div>
+                        <p class="project-date">Spring 2023</p>
+                        <h2 id="microcontroller-system">Chem-E-Car Microcontroller System</h2>
+                    </div><a
+                        class="text-link"
+                        href="https://github.com/jtann5/ChemE-Car-2023"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >View on GitHub <span aria-hidden="true">↗</span></a>
+                </header>
+                <ul class="technology-list" aria-label="Technologies and methods used">
+                    <li>C++</li>
+                    <li>Arduino</li>
+                    <li>Embedded Systems</li>
+                    <li>Multidisciplinary Engineering</li>
+                </ul>
+                <ul class="project-points">
+                    <li>
+                        Designed and implemented a C++ control system using two Arduinos, a motor controller, relay,
+                        solenoid valve, photosensor, LCD, joystick, and electrical components for a Chem-E-Car competition.
+                    </li>
+                    <li>
+                        Programmed two Arduinos to coordinate sensing, input, and control through serial communication.
+                    </li>
+                    <li>
+                        Built an LCD/joystick menu interface for testing, competition operation, and reaction monitoring.
+                    </li>
+                    <li>
+                        Incorporated an Easter egg that played “Take on Me,” helping the team win 1st place in the
+                        poster competition.
+                    </li>
+                </ul>
+                <div class="gallery-group">
+                    <div class="gallery-wrapper" id="gallery4">
+                        <button
+                            class="arrow left"
+                            type="button"
+                            onclick='scrollGallery(-1, "gallery4")'
+                            aria-label="Previous Chem-E-Car photo"
+                        >
+                            ‹
+                        </button>
+                        <div class="gallery" id="gallery4-images">
+                            <picture>
+                                <source srcset="images/microcontroller-system/car.webp" type="image/webp"><img
+                                    src="images/microcontroller-system/car.jpeg"
+                                    alt="Chem-E-Car vehicle"
+                                >
+                            </picture>
+                            <picture>
+                                <source srcset="images/microcontroller-system/back.webp" type="image/webp"><img
+                                    src="images/microcontroller-system/back.jpeg"
+                                    alt="Back of microcontroller system"
+                                >
+                            </picture>
+                            <picture>
+                                <source srcset="images/microcontroller-system/electronics.webp" type="image/webp"><img
+                                    src="images/microcontroller-system/electronics.jpeg"
+                                    alt="Microcontroller system internals"
+                                >
+                            </picture>
+                        </div>
+                        <button
+                            class="arrow right"
+                            type="button"
+                            onclick='scrollGallery(1, "gallery4")'
+                            aria-label="Next Chem-E-Car photo"
+                        >
+                            ›
+                        </button>
+                    </div>
+                    <div class="dots" id="gallery4-dots" aria-label="Chem-E-Car photo navigation"></div>
+                </div>
+                <div class="video-container">
+                    <iframe
+                        src="https://www.youtube.com/embed/sEzAx5g2JGE?si=cDI4ax0xXyQPa3xf"
+                        title="Chem-E-Car demonstration"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        referrerpolicy="strict-origin-when-cross-origin"
+                        allowfullscreen
+                    ></iframe>
+                </div>
+            </section>
+        </main>
+        <footer class="site-footer">
+            <div class="footer-brand">
+                <div class="footer-name">
+                    <svg
+                        class="sprout-icon"
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="21"
+                        height="21"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        aria-hidden="true"
+                    >
+                        <path d="M7 20h10"></path>
+                        <path d="M10 20c5.5-2.5.8-6.4 3-10"></path>
+                        <path
+                            d="M9.5 9.4c1.1.8 1.8 2.2 2.4 3.6-2.1.4-3.8.4-5.3-.3-1.2-.6-2.3-1.9-3.6-4 2.8-.5 4.8-.3 6.5.7z"
+                        >
+                        </path>
+                        <path
+                            d="M14.1 6A7 7 0 0 0 13 10c2.4-.1 4.5-.7 5.8-1.9 1-1 1.7-2.4 2.2-4.6-3.1-.1-5.3.6-6.9 2.5z"
+                        >
+                        </path>
+                    </svg><span>Jacob Tanner</span>
+                </div>
+                <p>Build things that matter.</p>
             </div>
-
-            <button id="menu-toggle" aria-label="Toggle menu" class="menu-icon">
-                <span class="bar top"></span>
-                <span class="bar middle"></span>
-                <span class="bar bottom"></span>
-            </button>
-        </div>
-
-        <ul id="nav-links">
-            <li><a class="active" href="portfolio.html">Portfolio</a></li>
-            <li><a href="resume.html">Resume</a></li>
-            <li><a href="about.html">About</a></li>
-        </ul>
+            <div class="footer-meta">
+                <ul>
+                    <li><a href="https://github.com/jtann5" target="_blank" rel="noopener noreferrer">GitHub</a></li>
+                    <li>
+                        <a href="https://www.linkedin.com/in/jacobytanner" target="_blank" rel="noopener noreferrer"
+                        >LinkedIn</a>
+                    </li>
+                </ul>
+                <p>&copy; <span data-current-year>2026</span> Jacob Tanner</p>
+            </div>
+        </footer>
+        <script src="js/gallery.js"></script>
+        <script src="js/audio-player.js"></script>
         <script src="js/nav.js"></script>
-    </nav>
-    <main>
-        <h1>Portfolio Projects</h1>
-        <div>
-            <h2 id="midi-generation">MIDI Generation with Transformers</h2>
-            <h5>Spring 2026</h5>
-            <ul>
-                <li>Developed a PyTorch-based transformer model to generate MIDI files from tokenized music sequences</li>
-                <li>Built training and generation scripts while experimenting with tokenization profiles, sequence lengths,
-                    model sizes, and sampling parameters</li>
-                <li>Trained and compared models for piano and multi-instrument MIDI generation using
-                    MAESTRO/YM2413-MDB datasets with REMI/REMI+ tokenization</li>
-            </ul>
-            <a href="https://github.com/jtann5/midi-generator" target="_blank" rel="noopener noreferrer"
-                class="underline-slide">View on GitHub &rarr;</a>
-            <br><br>
-            <a href="https://drive.google.com/drive/folders/1_RK2marvFUaFNgWrIp76ZYhSFPqg8ncW" target="_blank" rel="noopener noreferrer"
-                class="underline-slide">View Samples &rarr;</a>
-        </div>
-        <div>
-            <h2 id="coding-competency">Evaluating Generative AI Coding Competency in Python</h2>
-            <h5>Fall 2024</h5>
-            <ul>
-                <li>Evaluated five generative AI models on Python coding prompts spanning basic syntax, data structures, algorithms, and complex tasks</li>
-                <li>Applied established code-quality, correctness, and complexity metrics to assess AI-generated solutions across coding difficulty levels</li>
-                <li>Conducted statistical analysis and performance evaluation using R and RStudio</li>
-                <li>Produced a formal research report as part of ESOF 522, gaining experience in experimental design and technical research writing</li>
-            </ul>
-            <a href="https://drive.google.com/file/d/1lroELm8iNLUK3gA_G6cV9d2mp7iAx_ji/view" target="_blank" rel="nofollow noopener noreferrer"
-                class="underline-slide">Read the Full Report (PDF) &rarr;</a>
-        </div>
-        <div>
-            <h2 id="housing-portal">HRDC Housing Maintenance Portal</h2>
-            <h5>Spring 2024</h5>
-            <ul>
-                <li>Developed a web application for the HRDC, a nonprofit providing housing and essential services to
-                    Bozeman residents, for managing tenant maintenance requests</li>
-                <li>Engaged with the HRDC representative to gather requirements and incorporate feedback, in
-                    coordination with the course professor</li>
-                <li>Collaborated with a team of four, conducting two weekly scrum meetings to discuss work distribution</li>
-                <li>Utilized Django, PostgreSQL, NGINX, Gunicorn, HTML, CSS, Bootstrap5, HTMX, and JavaScript</li>
-            </ul>
-            <a href="https://github.com/jtann5/HRDC_Housing_Portal" target="_blank" rel="noopener noreferrer"
-                class="underline-slide">View on GitHub &rarr;</a>
-            <br><br>
-            <div class="gallery-wrapper" id="gallery1">
-                <button class="arrow left" onclick="scrollGallery(-1, 'gallery1')">&#10094;</button>
-                <div class="gallery" id="gallery1-images">
-                    <picture>
-                        <source srcset="images/housing-portal/dashboard.webp" type="image/webp">
-                        <img src="images/housing-portal/dashboard.jpeg" alt="Dashboard screen">
-                    </picture>
-                    <picture>
-                        <source srcset="images/housing-portal/all-requests.webp" type="image/webp">
-                        <img src="images/housing-portal/all-requests.jpeg" alt="All requests page">
-                    </picture>
-                    <picture>
-                        <source srcset="images/housing-portal/login.webp" type="image/webp">
-                        <img src="images/housing-portal/login.jpeg" alt="Login form">
-                    </picture>
-                    <picture>
-                        <source srcset="images/housing-portal/maintenance-request-form.webp" type="image/webp">
-                        <img src="images/housing-portal/maintenance-request-form.jpeg" alt="Maintenance request form">
-                    </picture>
-                    <picture>
-                        <source srcset="images/housing-portal/request-information.webp" type="image/webp">
-                        <img src="images/housing-portal/request-information.jpeg" alt="Maintenance request info">
-                    </picture>
-                </div>
-                <button class="arrow right" onclick="scrollGallery(1, 'gallery1')">&#10095;</button>
-            </div>
-            <div class="dots" id="gallery1-dots"></div>
-
-            <div class="gallery-wrapper" id="gallery1m">
-                <button class="arrow left" onclick="scrollGallery(-1, 'gallery1m')">&#10094;</button>
-                <div class="gallery" id="gallery1m-images">
-                    <picture>
-                        <source srcset="images/housing-portal/dashboard-mobile.webp" type="image/webp">
-                        <img src="images/housing-portal/dashboard-mobile.jpeg" alt="Dashboard screen">
-                    </picture>
-                    <picture>
-                        <source srcset="images/housing-portal/all-requests-mobile.webp" type="image/webp">
-                        <img src="images/housing-portal/all-requests-mobile.jpeg" alt="All requests page">
-                    </picture>
-                    <picture>
-                        <source srcset="images/housing-portal/login-mobile.webp" type="image/webp">
-                        <img src="images/housing-portal/login-mobile.jpeg" alt="Login form">
-                    </picture>
-                    <picture>
-                        <source srcset="images/housing-portal/maintenance-request-form-mobile.webp" type="image/webp">
-                        <img src="images/housing-portal/maintenance-request-form-mobile.jpeg"
-                            alt="Maintenance request form">
-                    </picture>
-                    <picture>
-                        <source srcset="images/housing-portal/request-information-mobile.webp" type="image/webp">
-                        <img src="images/housing-portal/request-information-mobile.jpeg" alt="Maintenance request info">
-                    </picture>
-                    <picture>
-                        <source srcset="images/housing-portal/navbar-mobile.webp" type="image/webp">
-                        <img src="images/housing-portal/navbar-mobile.jpeg" alt="Navigation dropdown bar">
-                    </picture>
-                </div>
-                <button class="arrow right" onclick="scrollGallery(1, 'gallery1m')">&#10095;</button>
-            </div>
-            <div class="dots" id="gallery1m-dots"></div>
-        </div>
-        <div>
-            <h2 id="robotics">Embedded Systems Robotics</h2>
-            <h5>Spring 2024</h5>
-            <ul>
-                <li>Built a web application with Flask and JavaScript to control various functions of the robot manually</li>
-                <li>Leveraged multithreading to facilitate concurrent movements and actions</li>
-                <li>Worked with a partner to integrate text-to-speech, OpenAI's Assistants API, speech recognition, UWB
-                    localization with vector mathematics, and an ultrasonic sensor, enabling the robot to act as a door
-                    greeter that guides users to specified quadrants and answers their questions</li>
-            </ul>
-            <a href="https://github.com/jtann5/ROB" target="_blank" rel="noopener noreferrer"
-                class="underline-slide">View on GitHub &rarr;</a>
-            <br><br>
-            <div class="gallery-wrapper" id="gallery2">
-                <button class="arrow left" onclick="scrollGallery(-1, 'gallery2')">&#10094;</button>
-                <div class="gallery" id="gallery2-images">
-                    <!-- Dynamically inserted via JavaScript -->
-                    <picture>
-                        <source srcset="images/robotics/robot-with-face.webp" type="image/webp">
-                        <img src="images/robotics/robot-with-face.jpeg" alt="Photo 1">
-                    </picture>
-                    <picture>
-                        <source srcset="images/robotics/robot-controller.webp" type="image/webp">
-                        <img src="images/robotics/robot-controller.jpeg" alt="Photo 2">
-                    </picture>
-                    <picture>
-                        <source srcset="images/robotics/robot-off.webp" type="image/webp">
-                        <img src="images/robotics/robot-off.jpeg" alt="Photo 3">
-                    </picture>
-                </div>
-                <button class="arrow right" onclick="scrollGallery(1, 'gallery2')">&#10095;</button>
-            </div>
-            <div class="dots" id="gallery2-dots"></div>
-        </div>
-        <div>
-            <h2 id="microcontroller-system">Chem-E-Car Microcontroller System</h2>
-            <h5>Spring 2023</h5>
-            <ul>
-                <li>Designed and implemented a C++-based control system using two Arduinos, a motor controller, relay,
-                    solenoid valve, photosensor, LCD, joystick, and electrical components to manage the start and stop
-                    reaction for a Chem-E-Car competition</li>
-                <li>Cooperated with chemical engineers to ensure the system met functional requirements</li>
-                <li>Created a user interface with menus for testing, competition use, and reaction monitoring</li>
-                <li>Incorporated an Easter egg that played “Take on Me,” helping the team win 1st place in the poster
-                    competition</li>
-            </ul>
-            <a href="https://github.com/jtann5/ChemE-Car-2023" target="_blank" rel="noopener noreferrer"
-                class="underline-slide">View on GitHub &rarr;</a>
-            <br><br>
-            <div class="gallery-wrapper" id="gallery4">
-                <button class="arrow left" onclick="scrollGallery(-1, 'gallery4')">&#10094;</button>
-                <div class="gallery" id="gallery4-images" id="gallery4">
-                    <picture>
-                        <source srcset="images/microcontroller-system/car.webp" type="image/webp">
-                        <img src="images/microcontroller-system/car.jpeg" alt="Chem-E-Car vehicle">
-                    </picture>
-                    <picture>
-                        <source srcset="images/microcontroller-system/back.webp" type="image/webp">
-                        <img src="images/microcontroller-system/back.jpeg" alt="Back of microcontroller system">
-                    </picture>
-                    <picture>
-                        <source srcset="images/microcontroller-system/electronics.webp" type="image/webp">
-                        <img src="images/microcontroller-system/electronics.jpeg"
-                            alt="Microcontroller system internals">
-                    </picture>
-                </div>
-                <button class="arrow right" onclick="scrollGallery(1, 'gallery4')">&#10095;</button>
-            </div>
-            <div class="dots" id="gallery4-dots"></div>
-
-            <div class="video-container">
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/sEzAx5g2JGE?si=cDI4ax0xXyQPa3xf"
-                    title="YouTube video player" frameborder="0"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                    referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-            </div>
-        </div>
-    </main>
-    <footer>
-        <ul>
-            <li>&copy; 2026 Jacob Tanner</li>
-            <li><a href="https://github.com/jtann5" target="_blank" rel="noopener noreferrer">GitHub</a></li>
-            <li><a href="https://www.linkedin.com/in/jacobytanner" target="_blank"
-                    rel="noopener noreferrer">LinkedIn</a></li>
-        </ul>
-    </footer>
-</body>
-
+    </body>
 </html>

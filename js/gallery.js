@@ -6,7 +6,9 @@ function initializeDots(galleryId) {
 
   // Create a dot for each image in the gallery
   pictures.forEach((_, index) => {
-    const dot = document.createElement('span');
+    const dot = document.createElement('button');
+    dot.type = 'button';
+    dot.setAttribute('aria-label', `View image ${index + 1}`);
     dot.addEventListener('click', () => scrollToImage(index, gallery, galleryId)); // Click on dot to scroll to image
     dotsContainer.appendChild(dot);
   });
@@ -75,7 +77,7 @@ function getCurrentIndex(gallery) {
 
 // Function to update the active dot based on the current image index
 function updateDots(galleryId, index) {
-  const dots = document.querySelectorAll(`#${galleryId}-dots span`);
+  const dots = document.querySelectorAll(`#${galleryId}-dots button`);
   dots.forEach(dot => dot.classList.remove('active'));
 
   if (dots[index]) {

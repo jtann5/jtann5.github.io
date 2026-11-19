@@ -1,48 +1,97 @@
-.container {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 20px;
-  gap: 40px; /* Space between image and text */
-  min-height: 80vh;
+.status-main {
+    display: grid;
+    min-height: calc(100vh - 210px);
+    place-items: center;
+    padding: 72px 24px;
 }
 
-.image-container {
-  max-width: 500px;
-  width: 100%;
-  flex-shrink: 0;
-  display: flex;
-  justify-content: center;
+.status-card {
+    width: 100%;
+    max-width: 960px;
 }
 
-.image-container picture img {
-  max-width: 100%;
-  height: auto;
-  display: block;
+.status-card.with-image {
+    display: grid;
+    grid-template-columns: minmax(280px, .9fr) minmax(0, 1.1fr);
+    gap: clamp(42px, 8vw, 86px);
+    align-items: center;
 }
 
-.text-content {
-    text-align: left;
-    max-width: 600px;
-    min-width: 200px;
+.status-image {
+    overflow: hidden;
+    border: 1px solid var(--border-subtle);
+    border-radius: 10px;
+    background: var(--card-bg);
 }
 
-.text-content h1 {
-  font-size: 2.5rem;
-  text-shadow: 0 0 8px #a0c8ff;
-  margin-bottom: 10px;
+.status-image picture,
+.status-image img {
+    display: block;
+    width: 100%;
 }
 
-.text-content p {
-  font-style: italic;
-  margin-bottom: 30px;
-  color: #bbb;
+.status-image>.light-image {
+    display: var(--display-light);
 }
 
-/* Responsive: stack image on top on small screens */
-@media (max-width: 768px) {
-  .container {
-    flex-direction: column;
+.status-image>.dark-image {
+    display: var(--display-dark);
+}
+
+.status-copy .eyebrow {
+    margin-bottom: 16px;
+}
+
+.status-copy h1 {
+    max-width: 640px;
+    margin: 0;
+    color: var(--text-strong);
+    font-size: clamp(42px, 7vw, 68px);
+    line-height: 1.05;
+    letter-spacing: -.05em;
+}
+
+.status-copy p {
+    max-width: 560px;
+    margin: 24px 0 32px;
+    color: var(--text-tertiary);
+    font-size: 18px;
+}
+
+.thank-you-card {
+    max-width: 720px;
+    padding: clamp(42px, 8vw, 76px);
+    border: 1px solid var(--border-subtle);
+    border-radius: 10px;
+    background: var(--card-bg);
     text-align: center;
-  }
+}
+
+.thank-you-card .sprout-icon {
+    width: 42px;
+    height: 42px;
+    margin-bottom: 20px;
+}
+
+.thank-you-card h1 {
+    margin: 0;
+    color: var(--text-strong);
+    font-size: clamp(42px, 7vw, 64px);
+    letter-spacing: -.05em;
+}
+
+.thank-you-card p {
+    margin: 18px 0 30px;
+    color: var(--text-tertiary);
+    font-size: 18px;
+}
+
+@media (max-width: 760px) {
+    .status-card.with-image {
+        grid-template-columns: 1fr;
+    }
+
+    .status-image {
+        max-width: 480px;
+    }
 }

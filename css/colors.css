@@ -1,103 +1,73 @@
-/* 
-  ===============================
-  🎨 CSS Variable Reference Guide
-  ===============================
-
-  ░░░ Layout & Surfaces ░░░
-  --page-bg           : Main page background color
-  --card-bg           : Background color for cards/sections
-  --ui-primary-bg     : Background for top nav and footer
-
-  ░░░ Text Colors ░░░
-  --text-primary      : Main body text color
-  --text-strong       : Strong headings (e.g. h1–h2)
-  --text-secondary    : Subheadings and emphasized text (e.g. h3–h4)
-  --text-tertiary     : Less prominent text (e.g. location, minor labels)
-  --text-meta         : Metadata (e.g. dates, captions)
-  --text-on-primary   : Text color shown on nav/footer backgrounds
-  --text-hover        : Hover state color for nav/footer links
-
-  ░░░ Borders & Lines ░░░
-  --border-subtle     : Light borders, underlines, separators
-
-  ░░░ Brand & Accent ░░░
-  --accent-color      : Brand color used for highlights, links, CTAs
-
-  ░░░ Display Utilities ░░░
-  --display-dark      : Used to toggle visibility of dark-specific elements
-  --display-light     : Used to toggle visibility of light-specific elements
-*/
-
-/* Try brand color: #6c63ff */
-
 :root {
-  --page-bg: #fff;
-  --card-bg: #f9f9f9;
-  --ui-primary-bg: #12171e;
-  --text-primary: #333;
-  --text-strong: #222;
-  --text-secondary: #444;
-  --text-tertiary: #666;
-  --text-meta: #777;
-  --text-on-primary: white;
-  --text-hover: gray;
-  --border-subtle: #ccc;
-  --accent-color: #1e90ff;
+  --page-bg: #ffffff;
+  --card-bg: #f7f8f9;
+  --ui-primary-bg: #ffffff;
+  --text-primary: #30343a;
+  --text-strong: #1f2328;
+  --text-secondary: #454b53;
+  --text-tertiary: #626a73;
+  --text-meta: #747d86;
+  --text-on-primary: #ffffff;
+  --text-hover: #2467a6;
+  --border-subtle: #dfe3e7;
+  --accent-color: #2467a6;
+  --accent-hover: #1b527f;
   --display-dark: none;
   --display-light: inline;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --page-bg: #0a0d10;
-    --card-bg: #2a2a2a;
-    --ui-primary-bg: #12171e;
-    --text-primary: white;
-    --text-strong: #f1f1f1;
-    --text-secondary: #bbb;
-    --text-tertiary: #888;
-    --text-meta: #777;
-    --text-on-primary: #6a6868;
-    --text-hover: #3a3a3a;
-    --border-subtle: #444;
-    --accent-color: #1e90ff;
+    --page-bg: #0c0f13;
+    --card-bg: #14191f;
+    --ui-primary-bg: #0c0f13;
+    --text-primary: #d8dde3;
+    --text-strong: #f3f5f7;
+    --text-secondary: #c3c9d0;
+    --text-tertiary: #9ba4ae;
+    --text-meta: #89939e;
+    --text-on-primary: #ffffff;
+    --text-hover: #75a9d7;
+    --border-subtle: #29313a;
+    --accent-color: #2467a6;
+    --accent-hover: #82b2dc;
     --display-dark: inline;
     --display-light: none;
   }
 }
 
-/* Manual override (light mode forced on) */
 .light-mode {
-  --page-bg: #fff;
-  --card-bg: #f9f9f9;
-  --ui-primary-bg: #12171e;
-  --text-primary: #333;
-  --text-strong: #222;
-  --text-secondary: #444;
-  --text-tertiary: #666;
-  --text-meta: #777;
-  --text-on-primary: white;
-  --text-hover: gray;
-  --border-subtle: #ccc;
-  --accent-color: #1e90ff;
+  --page-bg: #ffffff;
+  --card-bg: #f7f8f9;
+  --ui-primary-bg: #ffffff;
+  --text-primary: #30343a;
+  --text-strong: #1f2328;
+  --text-secondary: #454b53;
+  --text-tertiary: #626a73;
+  --text-meta: #747d86;
+  --text-on-primary: #ffffff;
+  --text-hover: #2467a6;
+  --border-subtle: #dfe3e7;
+  --accent-color: #2467a6;
+  --accent-hover: #1b527f;
   --display-dark: none;
   --display-light: inline;
 }
 
-/* Manual override (dark mode forced on) */
 .dark-mode {
-  --page-bg: #0a0d10;
-  --card-bg: #2a2a2a;
-  --ui-primary-bg: #12171e;
-  --text-primary: white;
-  --text-strong: #f1f1f1;
-  --text-secondary: #bbb;
-  --text-tertiary: #888;
-  --text-meta: #777;
-  --text-on-primary: #6a6868;
-  --text-hover: #3a3a3a;
-  --border-subtle: #444;
-  --accent-color: #1e90ff;
+  --page-bg: #0c0f13;
+  --card-bg: #14191f;
+  --ui-primary-bg: #0c0f13;
+  --text-primary: #d8dde3;
+  --text-strong: #f3f5f7;
+  --text-secondary: #c3c9d0;
+  --text-tertiary: #9ba4ae;
+  --text-meta: #89939e;
+  --text-on-primary: #ffffff;
+  --text-hover: #75a9d7;
+  --border-subtle: #29313a;
+  --accent-color: #2467a6;
+  --accent-hover: #82b2dc;
   --display-dark: inline;
   --display-light: none;
 }

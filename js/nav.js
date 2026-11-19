@@ -1,85 +1,67 @@
-// (function() {
-//   const root = document.documentElement;
-//   const themeSelect = document.getElementById('theme-select');
-//   const savedTheme = localStorage.getItem('theme') || 'system';
-
-//   // Set the selected option
-//   themeSelect.value = savedTheme;
-
-//   // Listen for changes
-//   themeSelect.addEventListener('change', (e) => {
-//     const newTheme = e.target.value;
-//     if (newTheme === 'system') {
-//       localStorage.removeItem('theme');
-//       root.classList.remove('light-mode');
-//       root.classList.remove('dark-mode');
-//     } else {
-//       localStorage.setItem('theme', newTheme);
-//       if (newTheme === 'dark') {
-//         root.classList.remove('light-mode')
-//         root.classList.add('dark-mode')
-//       } else {
-//         root.classList.remove('dark-mode')
-//         root.classList.add('light-mode')
-//       }
-//     }
-//   });
-// })();
-
 document.addEventListener('DOMContentLoaded', () => {
   const root = document.documentElement;
+  const themeButton = document.getElementById('theme-toggle');
+  const themeDropdown = document.getElementById('theme-dropdown');
   const themeButtons = document.querySelectorAll('#theme-dropdown button');
+  const menuButton = document.getElementById('menu-toggle');
+  const navLinks = document.getElementById('nav-links');
   const savedTheme = localStorage.getItem('theme') || 'system';
-  const themeBtn = document.getElementById("theme-toggle");
-  const dropdown = document.getElementById("theme-dropdown");
+
+  document.querySelectorAll('[data-current-year]').forEach((year) => {
+    year.textContent = new Date().getFullYear();
+  });
+
+  function setActiveTheme(theme) {
+    themeButtons.forEach((button) => {
+      button.classList.toggle('active', button.dataset.theme === theme);
+    });
+  }
 
   function applyTheme(theme) {
-    // Remove existing theme classes
     root.classList.remove('light-mode', 'dark-mode');
 
-    // Apply selected theme
     if (theme === 'system') {
       localStorage.removeItem('theme');
     } else {
       localStorage.setItem('theme', theme);
-      root.classList.add(theme + '-mode');
+      root.classList.add(`${theme}-mode`);
     }
 
-    // Update active button
-    themeButtons.forEach(btn => {
-      btn.classList.toggle('active', btn.dataset.theme === theme);
-    });
+    setActiveTheme(theme);
   }
 
-  // Set the selected theme
-  themeButtons.forEach(btn => {
-    btn.classList.toggle('active', btn.dataset.theme === savedTheme);
-  });
+  setActiveTheme(savedTheme);
 
-  // Listen to button clicks
-  themeButtons.forEach(button => {
+  themeButtons.forEach((button) => {
     button.addEventListener('click', () => {
-      const theme = button.dataset.theme;
-      applyTheme(theme);
-      dropdown.classList.add("hidden");
+      applyTheme(button.dataset.theme);
+      themeDropdown.classList.add('hidden');
+      themeButton.setAttribute('aria-expanded', 'false');
     });
   });
 
-  // Theme dropdown toggle
-  document.getElementById("theme-toggle").addEventListener("click", () => {
-    document.getElementById("theme-dropdown").classList.toggle("hidden");
+  themeButton.addEventListener('click', () => {
+    const isOpen = themeDropdown.classList.toggle('hidden') === false;
+    themeButton.setAttribute('aria-expanded', String(isOpen));
   });
 
-  // Mobile menu toggle
-  document.getElementById("menu-toggle").addEventListener("click", () => {
-    document.getElementById("nav-links").classList.toggle("open");
-    document.getElementById("menu-toggle").classList.toggle("open");
+  menuButton.addEventListener('click', () => {
+    const isOpen = navLinks.classList.toggle('open');
+    menuButton.classList.toggle('open', isOpen);
+    menuButton.setAttribute('aria-expanded', String(isOpen));
   });
 
-  // Close dropdowns on outside click
-  document.addEventListener("click", (e) => {
-    if (!themeBtn.contains(e.target) && !dropdown.contains(e.target)) {
-      dropdown.classList.add("hidden");
+  document.addEventListener('click', (event) => {
+    if (!themeButton.contains(event.target) && !themeDropdown.contains(event.target)) {
+      themeDropdown.classList.add('hidden');
+      themeButton.setAttribute('aria-expanded', 'false');
+    }
+  });
+
+  document.addEventListener('keydown', (event) => {
+    if (event.key === 'Escape') {
+      themeDropdown.classList.add('hidden');
+      themeButton.setAttribute('aria-expanded', 'false');
     }
   });
 });

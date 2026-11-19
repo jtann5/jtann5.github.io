@@ -1,124 +1,104 @@
-/* ===== Resume Section Headings ===== */
-.education h2,
-.experience h2,
-.projects h2,
-.skills h2 {
-  font-size: 1.75rem;
-  margin-bottom: 1rem;
-  border-bottom: 2px solid var(--border-subtle);
-  padding-bottom: 0.5rem;
-}
-
-/* ===== Shared Date Styling ===== */
-.dates {
-  font-size: 0.95rem;
-  color: var(--text-meta);
-  margin: 0.25rem 0;
-}
-
-/* ===== Education Section ===== */
-.education-item {
-  margin-bottom: 1.5rem;
-}
-
-.degree {
-  font-size: 1.25rem;
-  font-weight: 600;
-  margin: 0;
-  color: var(--text-strong);
-}
-
-.institution {
-  font-size: 1.125rem;
-  font-weight: 500;
-  margin: 0.25rem 0;
-  color: var(--text-secondary);
-}
-
-.location {
-  font-weight: 400;
-  color: var(--text-tertiary);
-}
-
-/* ===== Experience Section ===== */
-.experience-item {
-  margin-bottom: 2rem;
-}
-
-.job-title {
-  font-size: 1.25rem;
-  font-weight: 600;
-  margin: 0;
-  color: var(--text-strong);
-}
-
-.company {
-  font-size: 1.125rem;
-  font-weight: 500;
-  margin: 0.25rem 0;
-  color: var(--text-secondary);
-}
-
-.responsibilities {
-  margin-top: 0.5rem;
-  padding-left: 1.25rem;
-  list-style-type: disc;
-  color: var(--text-primary);
-  font-size: 0.95rem;
-}
-
-.responsibilities li {
-  margin-bottom: 0.4rem;
-}
-
-/* ===== Projects Section ===== */
-.project-item {
-  margin-bottom: 2rem;
-}
-
-.project-title {
-  font-size: 1.25rem;
-  font-weight: 600;
-  margin: 0;
-  color: var(--text-strong);
-}
-
-.project-details {
-  padding-left: 1.25rem;
-  list-style-type: disc;
-  color: var(--text-primary);
-  font-size: 0.95rem;
-}
-
-.project-details li {
-  margin-bottom: 0.4rem;
-}
-
-/* ===== Skills Section ===== */
-.skills-list {
-  padding-left: 1.25rem;
-  font-size: 0.95rem;
-  color: var(--text-primary);
-  list-style-type: disc;
-}
-
-.skills-list li {
-  margin-bottom: 0.5rem;
-  line-height: 1.5;
-}
-
-
 .resume-container {
-  max-width: 800px;       /* Limits width */
-  margin: 0 auto;         /* Centers horizontally */
-  box-sizing: border-box; /* Include padding in width */
+    max-width: 920px;
 }
 
-@media (max-width: 600px) {
-  .resume-container {
-    max-width: 100%;
-    padding-left: 1rem;
-    padding-right: 1rem;
-    margin-bottom: 40px;
-  }
+.resume-section {
+    display: grid;
+    grid-template-columns: 190px minmax(0, 1fr);
+    gap: 46px;
+    padding: clamp(58px, 8vw, 84px) 0;
+    border-bottom: 1px solid var(--border-subtle);
+}
+
+.resume-section>h2 {
+    margin: 0;
+    color: var(--text-strong);
+    font-size: 24px;
+    letter-spacing: -0.025em;
+}
+
+.resume-items {
+    display: grid;
+    gap: 44px;
+}
+
+.resume-item h3 {
+    margin: 0;
+    color: var(--text-strong);
+    font-size: 20px;
+    line-height: 1.3;
+}
+
+.item-heading {
+    display: flex;
+    align-items: start;
+    justify-content: space-between;
+    gap: 28px;
+}
+
+.organization {
+    margin: 7px 0 0;
+    color: var(--text-secondary);
+    font-size: 15px;
+}
+
+.organization span,
+.dates {
+    color: var(--text-meta);
+}
+
+.dates {
+    flex: 0 0 auto;
+    margin: 3px 0 0;
+    font-size: 14px;
+}
+
+.resume-item ul {
+    margin: 22px 0 0;
+    padding-left: 20px;
+    color: var(--text-primary);
+}
+
+.resume-item li {
+    margin-bottom: 9px;
+    padding-left: 5px;
+}
+
+.skills-grid {
+    display: grid;
+    gap: 12px;
+}
+
+.skills-grid>div {
+    padding: 20px 22px;
+    border: 1px solid var(--border-subtle);
+    border-radius: 8px;
+    background: var(--card-bg);
+}
+
+.skills-grid h3 {
+    margin: 0 0 7px;
+    color: var(--text-strong);
+    font-size: 16px;
+}
+
+.skills-grid p {
+    margin: 0;
+    color: var(--text-tertiary);
+}
+
+@media (max-width: 700px) {
+    .resume-section {
+        grid-template-columns: 1fr;
+        gap: 28px;
+    }
+
+    .item-heading {
+        flex-direction: column;
+        gap: 6px;
+    }
+
+    .dates {
+        order: -1;
+    }
 }
