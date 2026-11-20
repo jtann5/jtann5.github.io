@@ -58,6 +58,7 @@ document.addEventListener('DOMContentLoaded', () => {
         if (activeAudio && activeAudio !== audio) {
           activeAudio.pause();
           activePlayer.classList.remove('is-playing');
+          activePlayer.querySelector('.audio-status').textContent = 'Paused';
         }
         await audio.play();
         player.classList.add('is-playing');
@@ -70,6 +71,8 @@ document.addEventListener('DOMContentLoaded', () => {
         player.classList.remove('is-playing');
         button.setAttribute('aria-label', button.getAttribute('aria-label').replace('Pause', 'Play'));
         status.textContent = 'Paused';
+        activeAudio = null;
+        activePlayer = null;
       }
     });
 

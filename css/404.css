@@ -7,13 +7,13 @@
 
 .status-card {
     width: 100%;
-    max-width: 960px;
+    max-width: 1120px;
 }
 
 .status-card.with-image {
     display: grid;
-    grid-template-columns: minmax(280px, .9fr) minmax(0, 1.1fr);
-    gap: clamp(42px, 8vw, 86px);
+    grid-template-columns: minmax(360px, 1.08fr) minmax(0, .92fr);
+    gap: clamp(36px, 6vw, 72px);
     align-items: center;
 }
 
@@ -49,6 +49,9 @@
     font-size: clamp(42px, 7vw, 68px);
     line-height: 1.05;
     letter-spacing: -.05em;
+    text-shadow:
+        0 0 8px color-mix(in srgb, var(--accent-color) 72%, transparent),
+        0 0 26px color-mix(in srgb, var(--accent-color) 34%, transparent);
 }
 
 .status-copy p {
@@ -92,6 +95,8 @@
     }
 
     .status-image {
-        max-width: 480px;
+        width: 100%;
+        max-width: 560px;
+        margin: 0 auto;
     }
 }
